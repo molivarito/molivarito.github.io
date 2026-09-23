@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>cap10_resonancia_e_impedancia – Acústica Musical · UC</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b1e7e8ee10296b6f6820b1334157194.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#capítulo-10-resonancia-impedancia-y-acoplamiento" id="toc-capítulo-10-resonancia-impedancia-y-acoplamiento" class="nav-link active" data-scroll-target="#capítulo-10-resonancia-impedancia-y-acoplamiento">Capítulo 10 — Resonancia, impedancia y acoplamiento</a>
+  <ul class="collapse">
+  <li><a href="#el-empujón-que-llega-a-tiempo" id="toc-el-empujón-que-llega-a-tiempo" class="nav-link" data-scroll-target="#el-empujón-que-llega-a-tiempo">El empujón que llega a tiempo</a></li>
+  <li><a href="#el-retrato-de-un-resonador-la-curva-de-respuesta" id="toc-el-retrato-de-un-resonador-la-curva-de-respuesta" class="nav-link" data-scroll-target="#el-retrato-de-un-resonador-la-curva-de-respuesta">El retrato de un resonador: la curva de respuesta</a></li>
+  <li><a href="#un-misterio-con-elástico" id="toc-un-misterio-con-elástico" class="nav-link" data-scroll-target="#un-misterio-con-elástico">Un misterio con elástico</a></li>
+  <li><a href="#la-botella-un-resonador-de-bolsillo" id="toc-la-botella-un-resonador-de-bolsillo" class="nav-link" data-scroll-target="#la-botella-un-resonador-de-bolsillo">La botella: un resonador de bolsillo</a></li>
+  <li><a href="#el-mapa-de-lo-que-viene" id="toc-el-mapa-de-lo-que-viene" class="nav-link" data-scroll-target="#el-mapa-de-lo-que-viene">El mapa de lo que viene</a></li>
+  <li><a href="#la-clínica-su-proyecto-pasa-al-pizarrón" id="toc-la-clínica-su-proyecto-pasa-al-pizarrón" class="nav-link" data-scroll-target="#la-clínica-su-proyecto-pasa-al-pizarrón">La clínica: su proyecto pasa al pizarrón</a></li>
+  <li><a href="#preguntas-que-la-sesión-va-a-responder" id="toc-preguntas-que-la-sesión-va-a-responder" class="nav-link" data-scroll-target="#preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión va a responder</a></li>
+  <li><a href="#referencias-del-capítulo" id="toc-referencias-del-capítulo" class="nav-link" data-scroll-target="#referencias-del-capítulo">Referencias del capítulo</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../libro/00_prologo.html">Libro — Escuchar como científico</a></li><li class="breadcrumb-item"><a href="../libro/cap10_resonancia_e_impedancia.html">Capítulo 10 — Resonancia, impedancia y acoplamiento</a></li></ol></nav></header>
+
+
+
+
+<section id="capítulo-10-resonancia-impedancia-y-acoplamiento" class="level1">
+<h1>Capítulo 10 — Resonancia, impedancia y acoplamiento</h1>
+<p><em>Lectura previa a la sesión 10. Objetivos: OA1.2, OA1.3 (panorama), OA3.2 y OA5.2 (hito 2 y clínica de proyecto).</em></p>
+<section id="el-empujón-que-llega-a-tiempo" class="level2">
+<h2 class="anchored" data-anchor-id="el-empujón-que-llega-a-tiempo">El empujón que llega a tiempo</h2>
+<p>Todo el mundo ha empujado un columpio, y por eso todo el mundo sabe ya — aunque no lo haya puesto en palabras — la idea central de este capítulo.</p>
+<p>Un columpio tiene su vaivén propio: suéltelo desde un costado y oscilará a un ritmo que no eligió usted ni elige el niño — lo eligen el largo de las cadenas y la gravedad. Ese ritmo es su <strong>frecuencia propia</strong>, que anotaremos <span class="math inline">f_0</span>, y es el pariente directo de las frecuencias características que usted ya conoce desde la sesión 3: es lo que hace el sistema cuando lo dejan en paz. A eso lo llamamos oscilación <strong>libre</strong>, y su destino es siempre el mismo: decaer, porque el roce cobra su parte en cada ciclo.</p>
+<p>Pero usted no deja el columpio en paz: lo empuja. Y aquí está el experimento que le pido hacer mentalmente (o en la plaza más cercana, que es mejor). Intente empujar el columpio al doble de su ritmo, o a la mitad. Es frustrante: la mitad de sus empujones llegan cuando el columpio viene de vuelta, lo frenan en lugar de ayudarlo, y el resultado neto es un bamboleo mediocre. Ahora empuje a SU ritmo, el del columpio. Cada empujón — aunque sea suave — llega exactamente cuando el columpio se aleja de usted. Todos suman. Con dos dedos, un adulto lleva a un niño a alturas que asustan a la abuela.</p>
+<p>Eso es la <strong>resonancia</strong>: cuando un sistema es forzado desde afuera, su respuesta es máxima si la frecuencia de la excitación coincide con su frecuencia propia. No hay magia ni “simpatía” misteriosa: hay empujones que se acumulan en vez de cancelarse (Benade 1990, sec.&nbsp;10.1, empieza exactamente aquí).</p>
+<p>En la sesión 9 usted dejó escrita una pregunta: ¿qué determina que un sistema “prefiera” vibrar en sus frecuencias y no en las que yo le impongo? Ya tiene la mitad de la respuesta. La otra mitad — que el sistema en verdad NO se niega a vibrar a otras frecuencias, solo responde poco y de mala gana — la va a oír en la primera media hora de la sesión.</p>
+</section>
+<section id="el-retrato-de-un-resonador-la-curva-de-respuesta" class="level2">
+<h2 class="anchored" data-anchor-id="el-retrato-de-un-resonador-la-curva-de-respuesta">El retrato de un resonador: la curva de respuesta</h2>
+<p>Imagine ahora que hacemos el experimento del columpio con método: forzamos al sistema a cada frecuencia posible, siempre con la misma fuerza, y anotamos cuánto responde. El gráfico resultante — amplitud de respuesta contra frecuencia de excitación — es la <strong>curva de respuesta</strong>, y es el retrato más útil que la acústica sabe hacer de un objeto. Lejos de <span class="math inline">f_0</span>, la curva es baja. En <span class="math inline">f_0</span>, hay un pico. En la sesión va a ver (y oír) esa curva dibujarse en tiempo real, con una demo en que usted barre la frecuencia de excitación y escucha a la respuesta inflarse al pasar por la resonancia.</p>
+<p>La pregunta interesante es qué tan <strong>ancho</strong> es el pico, y la respuesta la tiene el <strong>amortiguamiento</strong> — el roce que disipa la energía de la vibración. Poco roce: pico alto y angosto; el sistema responde muchísimo, pero solo si usted le acierta casi exacto (piense en una copa de cristal, que exige SU nota). Mucho roce: pico bajo y ancho; el sistema responde algo a muchas frecuencias vecinas, sin entusiasmarse por ninguna. Benade midió esto con una humilde bandeja de lata (Benade 1990, sec.&nbsp;10.7), y usted conoce el fenómeno de la vida real: ese objeto — un vaso en la repisa, una moldura del auto — que zumba únicamente cuando pasa por él UNA nota concreta de la música. Ahora sabe qué es: un resonador de pico angosto al que alguien, por fin, le acertó (figura 1).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/figuras/s10_curva_resonancia.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 1.</strong> La curva de respuesta de un resonador (esquema): cuánto responde frente a la frecuencia con que se lo fuerza, con un pico en su frecuencia propia <span class="math inline">f_0</span>. Poco amortiguamiento da un pico alto y angosto (la copa de cristal, que exige su nota exacta); mucho amortiguamiento da un pico bajo y ancho (responde algo a muchas frecuencias vecinas).</figcaption>
+</figure>
+</div>
+<p>Hay un segundo personaje, menos famoso y musicalmente decisivo: el <strong>transiente de ataque</strong>. Un resonador no responde de inmediato. Como el columpio, necesita acumular empujones antes de alcanzar su amplitud de régimen, y ese arranque toma tiempo (Benade 1990, sec.&nbsp;10.2). Aquí va una pista para la demo, formulada como pregunta: ¿qué esperaría usted — que el resonador de pico angosto arranque más rápido o más lento que el de pico ancho? Piénselo con el columpio: acumular una oscilación gigante con empujones suaves, ¿es cosa de dos empujones o de muchos? En la sesión, el mismo slider que le cambia el ancho al pico le va a cambiar la duración al arranque, y esa coincidencia no es casualidad: son dos caras de la misma moneda.</p>
+</section>
+<section id="un-misterio-con-elástico" class="level2">
+<h2 class="anchored" data-anchor-id="un-misterio-con-elástico">Un misterio con elástico</h2>
+<p>Ahora, el problema que de verdad abre la segunda mitad del semestre. Consiga un elástico grueso, estírelo entre los dedos y púlselo. Vibra — se ve perfectamente — y sin embargo casi no se oye. Guarde esa observación, porque es escandalosa: en la sesión 3 usted aprendió que el sonido ES vibración, ¿y aquí hay vibración sin sonido?</p>
+<p>El diagnóstico tiene nombre técnico, y conviene conocerlo de entrada: <strong>impedancia</strong>, la resistencia de un sistema a ser puesto en movimiento. La cuerda delgada es, para el aire, un mal socio: vibra con mucha fuerza pero corta el aire sin empujarlo, como un cuchillo que rema. La energía está ahí, atrapada, sin camino de salida hacia el aire. Para liberarla hace falta un intermediario que hable los dos idiomas — algo que la cuerda pueda mover y que a su vez mueva mucho aire —, y a la calidad de esa conexión la llamamos <strong>acoplamiento</strong> (C&amp;G cap. 5, pp.&nbsp;183–202, es el capítulo puente que este capítulo sigue).</p>
+<p>Todos los instrumentos de cuerda que usted conoce cargan con este problema, y todos lo resuelven igual: la cuerda no trabaja sola. Apoya su vibración, a través del <strong>puente</strong>, en una tapa o caja que sí sabe empujar aire. En la sesión, el experimento del elástico sigue con una caja de cartón, y trae una pregunta con trampa que no le voy a responder aquí — solo se la dejo armada: si la caja hace sonar al elástico más fuerte, pero nadie le agregó energía (usted lo pulsó igual de fuerte), <strong>algo tiene que ceder a cambio. ¿Qué?</strong> Recuerde la sesión 6: sonar más fuerte es transferir energía más rápido. Escriba su predicción antes de venir.</p>
+</section>
+<section id="la-botella-un-resonador-de-bolsillo" class="level2">
+<h2 class="anchored" data-anchor-id="la-botella-un-resonador-de-bolsillo">La botella: un resonador de bolsillo</h2>
+<p>El taller de la sesión se hace con el resonador más barato y más noble que existe: una botella. Sople rasante sobre la boca de una botella vacía y obtendrá una nota grave, sorprendentemente pura y estable.</p>
+<p>¿Qué vibra ahí? No conteste rápido. No es el vidrio (eso es lo que suena cuando la GOLPEA, y ya sabe desde la sesión 3 que eso es otro asunto). Cuando usted sopla, lo que oscila es el <strong>aire mismo</strong>: el aire del cuello sube y baja en bloque, como un tapón, y el aire del cuerpo de la botella se comprime y expande empujándolo de vuelta, como un resorte. Una masa, un resorte: el sistema más simple del curso, con una sola <span class="math inline">f_0</span>, bien definida y — esto es lo valioso — <strong>medible con el afinador de su celular</strong>. Este resonador tiene apellido propio (Helmholtz, el mismo que volverá a aparecer en s11) y un capítulo de ejercicios en ROS cap. 4.</p>
+<p>El taller le va a pedir dos predicciones por escrito antes de soplar nada, y se las adelanto para que llegue con opinión formada — discútalas con alguien, mejor si no estudia lo mismo que usted:</p>
+<ol type="1">
+<li>Si le agrego agua a la botella hasta la mitad y <strong>soplo</strong>, la nota ¿sube o baja respecto de la botella vacía? ¿Cuánto, a ojo — un tono, una quinta, una octava?</li>
+<li>Si en vez de soplar la <strong>golpeo</strong> con una cuchara, el agua ¿sube o baja la nota?</li>
+</ol>
+<p>Si le tinca que las dos respuestas son la misma, o que son distintas, en ambos casos le conviene poder decir <em>por qué</em>. La pista está en el párrafo anterior: pregúntese, en cada caso, <strong>quién recibe la energía</strong>.</p>
+</section>
+<section id="el-mapa-de-lo-que-viene" class="level2">
+<h2 class="anchored" data-anchor-id="el-mapa-de-lo-que-viene">El mapa de lo que viene</h2>
+<p>Este capítulo es el puente hacia la última parte del curso: los instrumentos como sistemas. Con las herramientas de hoy — resonancia, curva de respuesta, impedancia, acoplamiento — las familias de instrumentos se ordenan por una sola pregunta: ¿<strong>cómo le llega la energía</strong> al sistema vibrante?</p>
+<p>A veces llega de una vez: golpear, pulsar (eso ya lo estudiamos en las sesiones 3 y 4 — el sonido nace fuerte y decae, oscilación libre). Y a veces llega de forma continua: el arco que frota (sesión 11), el soplo (sesión 12), el aire de los pulmones a través de las cuerdas vocales (sesión 13). Los sonidos sostenidos de la música — los que pueden crecer, mantenerse, cantar — viven todos en esta segunda familia, y esconden una pregunta preciosa que Benade convirtió en el corazón de su libro (Benade 1990, sec.&nbsp;20.2): si la energía llega pareja, sin ritmo — un soplo constante, un arrastre continuo —, ¿de dónde sale la NOTA, ese vaivén exquisitamente periódico? ¿Quién le pone el ritmo? La sesión apenas siembra esa idea; las dos siguientes la cosechan.</p>
+</section>
+<section id="la-clínica-su-proyecto-pasa-al-pizarrón" class="level2">
+<h2 class="anchored" data-anchor-id="la-clínica-su-proyecto-pasa-al-pizarrón">La clínica: su proyecto pasa al pizarrón</h2>
+<p>La sesión 10 es también el <strong>hito 2</strong> de su proyecto (10 %): al inicio de la clase usted entrega su compilado (radiografía espectral de s08, mapa de escala de s09, bitácora al día, estado respecto de lo prometido en el hito 1) — la pauta publicada tiene el detalle. En el segundo módulo presentará ese avance a otra mesa, y escuchará los avances de otros, con una pauta de retroalimentación estructurada: dos fortalezas, dos dudas, una sugerencia <strong>medible</strong>. Traiga el objeto: un proyecto que suena se discute mejor que un proyecto contado. Y llegue con esta pregunta ya pensada para su propio objeto, porque es la que la clínica le va a hacer: ¿dónde están sus resonancias, y quién es su “caja”?</p>
+</section>
+<section id="preguntas-que-la-sesión-va-a-responder" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión va a responder</h2>
+<ol type="1">
+<li>¿Qué determina que un sistema responda mucho a una frecuencia y poco a las demás? ¿Y qué fija el ancho de esa “zona de entusiasmo”?</li>
+<li>El resonador de pico angosto, ¿arranca más rápido o más lento que el de pico ancho? ¿Qué tiene que ver eso con el ataque de un instrumento?</li>
+<li>El elástico sobre la caja suena más fuerte sin energía extra: ¿qué cede a cambio?</li>
+<li>La botella con agua hasta la mitad: ¿sube o baja la nota al soplar? ¿Y al golpear? ¿Por qué habrían de ser respuestas distintas?</li>
+<li>Si el soplo es parejo y continuo, ¿de dónde sale una nota periódica y estable?</li>
+</ol>
+</section>
+<section id="referencias-del-capítulo" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Benade (1990), cap. 10 (secs. 10.1–10.8 y EEQ 10.9) — péndulo forzado, transiente inicial, amortiguamiento, la bandeja de lata y las implicancias musicales; sec.&nbsp;20.2 — regímenes de oscilación (solo sembrada aquí).</li>
+<li>Campbell &amp; Greated (1987), cap. 5, pp.&nbsp;183–202 — resonancia, impedancia y acoplamiento: el capítulo puente hacia los instrumentos.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), cap. 4 (secs. 4.1–4.11) — resonancia, impedancia, resonador de Helmholtz y autoexcitación, con ejercicios; cap. 2 — sistemas vibrantes y amortiguamiento.</li>
+<li>Roederer (1997), cap. 4, sec.&nbsp;4.3 — espectros y resonancia. En español.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

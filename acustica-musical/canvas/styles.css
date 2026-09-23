@@ -1,0 +1,294 @@
+/* Estilo del sitio del curso Acústica Musical.
+   Rediseño "tinta y agua" (2026-07-22): papel casi blanco y frío,
+   acento verde petróleo, títulos sans sobre cuerpo serif, paneles
+   gris-niebla y menos bordes. Reemplaza la identidad anterior
+   (papel beige, serif total, acento rojo ladrillo). */
+
+:root {
+  --tinta: #1f2937;
+  --acento: #0f766e;
+  --azul: #34558b;
+  --papel: #fbfbf9;
+  --panel: #eef3f2;
+  --sans: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.55;
+  font-size: 1.02rem;
+}
+
+/* Medida de lectura: columna de prosa ~46rem (~72 caracteres), centrada.
+   Verificado en _site/sesiones/s03/plan.html y _site/libro/cap03_*.html:
+   Quarto renderiza <main class="content" id="quarto-document-content">
+   como único contenedor de la prosa (ya usado por el resto de este
+   archivo), así que basta con acotar su ancho aquí; tablas/figuras siguen
+   dentro de esa misma columna pero pueden activar su propio scroll
+   horizontal si lo necesitan (ver reglas de table más abajo). */
+main.content {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+/* index.qmd declara page-layout: full a propósito (el mapa interactivo
+   necesita el ancho completo: franja de 15 sesiones, grid de tarjetas
+   OA). Quarto marca eso agregando la clase page-layout-full a
+   #quarto-content (verificado en _site/index.html: su <main> queda con
+   class="content column-page-right"). Sin esta excepción, la medida de
+   lectura de arriba angostaría también el mapa, que es justo lo que la
+   tarea pide no pisar. */
+#quarto-content.page-layout-full main.content {
+  max-width: none;
+  margin-inline: 0;
+}
+
+/* Párrafos tipo libro: sangría de primera línea en párrafos consecutivos,
+   con separación vertical reducida entre ellos. Se usa el combinador de
+   hermano adyacente `p + p`: en el HTML de Quarto los párrafos de un
+   mismo bloque de prosa son hermanos directos dentro de
+   <section class="level1/level2">, así que un <p> cuyo hermano anterior
+   es un título, una tabla, un <div class="quarto-figure">, una lista o
+   un blockquote nunca es alcanzado por `p + p` y por lo tanto queda sin
+   sangría, tal como se pide. Se usa un solo valor de margen (0.35rem)
+   para todos los párrafos en vez de dar un margen distinto al primer
+   párrafo del bloque, para evitar el colapso de márgenes de CSS (el
+   margen mayor de los dos adyacentes "gana" y anularía el efecto);
+   la jerarquía visual tras un título ya la da el aire de los h2/h3. */
+main.content p {
+  margin: 0 0 0.35rem 0;
+}
+main.content p + p {
+  text-indent: 1.25em;
+}
+
+/* Justificado editorial en la prosa del contenido principal, con
+   partición silábica (el lang="es" del documento la habilita). Se aplica
+   a todos los <p> de main.content y luego se desactiva explícitamente en
+   los contextos que no son prosa corrida: listas "sueltas" de Quarto
+   pueden envolver cada ítem en un <p> (main.content li p, más abajo),
+   tablas (main.content table p, junto a las reglas de tabla) y citas
+   (main.content blockquote p, junto a blockquote). figcaption no es un
+   <p> en el HTML que genera Quarto, así que no queda afectado por esta
+   regla y conserva su propio estilo definido más abajo. */
+main.content p {
+  text-align: justify;
+  hyphens: auto;
+}
+main.content li p {
+  text-align: left;
+  hyphens: none;
+}
+/* El mapa interactivo de index.qmd (#mapa) trae sus propios estilos
+   acotados por id definidos en el propio index.qmd (tarjetas OA, chips,
+   franja de sesiones). Sus párrafos cortos de interfaz (p.ej.
+   #mapa .oacard .enunciado) no son prosa y no deben heredar el
+   justificado/sangría/margen de párrafo de más arriba: el selector con
+   id siempre gana en especificidad sobre "main.content p", así que esto
+   neutraliza el goteo sin tocar el CSS propio del mapa. */
+#mapa p {
+  text-align: left;
+  hyphens: none;
+  text-indent: 0;
+  margin: revert; /* vuelve al margen por defecto del navegador, no al
+                     0.35rem de la prosa del curso */
+}
+/* Los h3 de las tarjetas OA (#mapa .oacard h3) no deben convertirse en
+   el "rótulo" sans-serif/uppercase de más abajo (main.content h3): se
+   devuelven al serif compartido con h1/h2/h4, que es el estilo que ya
+   tenían antes de este cambio. */
+#mapa h3 {
+  font-family: var(--sans);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Contenido principal: títulos en sans moderna (el cuerpo sigue serif —
+   contraste editorial sans-display / serif-texto). */
+main.content h1,
+main.content h2,
+main.content h4 {
+  font-family: var(--sans);
+  line-height: 1.25;
+  color: var(--tinta);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+main.content h1 {
+  font-size: 1.7rem;
+  border-bottom: 3px solid var(--acento);
+  padding-bottom: 0.35rem;
+}
+
+/* H2: el quiebre de sección lo marcan el aire y el color de acento —
+   sin línea superior (aligera la página). */
+main.content h2 {
+  font-size: 1.22rem;
+  margin-top: 2.8rem;
+  color: var(--acento);
+  border-bottom: none;
+}
+
+/* H3: no se trata como sub-título tipográfico sino como "rótulo" de
+   bloque (sans-serif, versalitas, discreto) para que se distinga de un
+   vistazo del cuerpo serif del párrafo. Va después del bloque h1/h2/h3/h4
+   de arriba para ganar en la cascada (misma especificidad, orden posterior). */
+main.content h3 {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+
+a { color: var(--acento); }
+a:hover { color: #0b5f59; }
+
+blockquote {
+  border-left: 4px solid var(--acento);
+  margin: 1rem 0;
+  padding: 0.2rem 1rem;
+  background: var(--panel);
+  border-radius: 0 6px 6px 0;
+}
+/* Las citas no se justifican ni parten en sílabas: son material aparte,
+   no prosa corrida del cuerpo principal. Con prefijo main.content para
+   igualar la especificidad de "main.content p" (justificado) de más
+   abajo y así poder anularlo aquí. */
+main.content blockquote p {
+  text-align: left;
+  hyphens: none;
+  text-indent: 0;
+}
+
+/* Tablas: cuerpo serif, encabezado sans en versalitas.
+   font-size/line-height reducidos y más aire vertical en celdas para que
+   las tablas de los planes (5 columnas de prosa) se lean como material de
+   referencia, no como texto corrido. overflow-x propio: si el contenido
+   de alguna tabla no cabe en la medida de lectura, se hace scroll
+   horizontal ahí mismo en vez de romper el layout de Quarto (no se
+   intenta un "breakout" a ancho completo de viewport, que no se puede
+   verificar visualmente en esta tarea). */
+main.content table {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+main.content th {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+  border-bottom: 2px solid var(--acento);
+  background: var(--papel);
+  padding: 0.5rem 0.6rem;
+}
+main.content td {
+  vertical-align: top;
+  padding: 0.55rem 0.6rem;
+}
+/* El texto dentro de celdas es material de referencia: sin justificar
+   ni partir en sílabas, y sin la sangría de párrafo del cuerpo. */
+main.content table p {
+  text-align: left;
+  hyphens: none;
+  text-indent: 0;
+  margin: 0;
+}
+
+/* Listas: más sangría y margen que el default del navegador, y viñetas
+   discretas (gris, no el rojo de acento) para que no compitan visualmente
+   con el texto al recorrer la página. */
+main.content ul,
+main.content ol {
+  margin: 0.6rem 0 1rem 0;
+  padding-left: 2rem;
+}
+main.content li {
+  margin-bottom: 0.45rem;
+  line-height: 1.5;
+}
+main.content ul li::marker {
+  color: #999;
+}
+
+code {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 0.86em;
+  background: var(--panel);
+  color: var(--tinta);
+  padding: 0.08em 0.35em;
+  border-radius: 3px;
+}
+pre {
+  background: var(--panel);
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+}
+pre code { background: none; padding: 0; }
+
+/* Figuras: imagen centrada, leyenda sans más pequeña */
+figure { margin: 1.6rem auto; text-align: center; }
+figure img { max-width: min(100%, 680px); }
+figcaption, .figure-caption {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: left;
+  max-width: 640px;
+  margin-inline: auto;
+  line-height: 1.4;
+}
+
+/* Marco del sitio (barra lateral, navegación, buscador): sans-serif */
+.sidebar, .navbar, .quarto-secondary-nav,
+#quarto-sidebar, #TOC, .page-navigation, .pagination {
+  font-family: Helvetica, Arial, sans-serif;
+}
+#quarto-sidebar {
+  background: #ffffff;
+  border-right: 1px solid #e5eae9;
+}
+.sidebar nav[role="doc-toc"] > h2 { font-family: Helvetica, Arial, sans-serif; }
+#quarto-margin-sidebar { background: transparent; }
+.sidebar-item .sidebar-item-text { font-size: 0.86rem; }
+.sidebar-item-container .active {
+  color: var(--acento);
+  font-weight: 600;
+}
+#TOC a { font-size: 0.82rem; }
+
+/* Título del sitio en la barra lateral */
+.sidebar-title, .sidebar-title a {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--acento);
+}
+
+/* Demos embebidas en iframe */
+iframe.demo {
+  width: 100%;
+  height: 640px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+}
+
+hr { border: none; border-top: 1px solid #ccc; margin: 2rem 0; }
+img { max-width: 100%; }
+
+@media print {
+  body { background: white; }
+}

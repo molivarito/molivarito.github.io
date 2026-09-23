@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>apunte_s11_cuerdas_frotadas_y_cuerpo – Acústica Musical · UC</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1b1e7e8ee10296b6f6820b1334157194.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#cuerdas-frotadas-y-el-cuerpo-del-instrumento" id="toc-cuerdas-frotadas-y-el-cuerpo-del-instrumento" class="nav-link active" data-scroll-target="#cuerdas-frotadas-y-el-cuerpo-del-instrumento">Cuerdas frotadas y el cuerpo del instrumento</a>
+  <ul class="collapse">
+  <li><a href="#por-qué-el-arco-no-chirría-cuando-el-violinista-sabe-lo-que-hace" id="toc-por-qué-el-arco-no-chirría-cuando-el-violinista-sabe-lo-que-hace" class="nav-link" data-scroll-target="#por-qué-el-arco-no-chirría-cuando-el-violinista-sabe-lo-que-hace">¿Por qué el arco no chirría (cuando el violinista sabe lo que hace)?</a></li>
+  <li><a href="#la-cuerda-pone-el-metrónomo" id="toc-la-cuerda-pone-el-metrónomo" class="nav-link" data-scroll-target="#la-cuerda-pone-el-metrónomo">La cuerda pone el metrónomo</a></li>
+  <li><a href="#la-esquina-invisible" id="toc-la-esquina-invisible" class="nav-link" data-scroll-target="#la-esquina-invisible">La esquina invisible</a></li>
+  <li><a href="#la-cuerda-no-mueve-el-aire-la-cadena-completa" id="toc-la-cuerda-no-mueve-el-aire-la-cadena-completa" class="nav-link" data-scroll-target="#la-cuerda-no-mueve-el-aire-la-cadena-completa">La cuerda no mueve el aire: la cadena completa</a></li>
+  <li><a href="#síntesis" id="toc-síntesis" class="nav-link" data-scroll-target="#síntesis">Síntesis</a></li>
+  <li><a href="#hacia-la-sesión-12" id="toc-hacia-la-sesión-12" class="nav-link" data-scroll-target="#hacia-la-sesión-12">Hacia la sesión 12</a></li>
+  <li><a href="#referencias-y-lectura-complementaria" id="toc-referencias-y-lectura-complementaria" class="nav-link" data-scroll-target="#referencias-y-lectura-complementaria">Referencias y lectura complementaria</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../curso/sesion-11/apunte_s11_cuerdas_frotadas_y_cuerpo.html">Sesión 11 — Cuerdas frotadas y el cuerpo</a></li><li class="breadcrumb-item"><a href="../../curso/sesion-11/apunte_s11_cuerdas_frotadas_y_cuerpo.html">Cuerdas frotadas y el cuerpo del instrumento</a></li></ol></nav></header>
+
+
+
+
+<section id="cuerdas-frotadas-y-el-cuerpo-del-instrumento" class="level1">
+<h1>Cuerdas frotadas y el cuerpo del instrumento</h1>
+<p><strong>Sesión 11</strong> · Curso Acústica Musical UC <strong>Objetivos que cubre</strong>: OA1.3 (mecanismo de excitación frotada; régimen de oscilación), OA1.1 (modos del cuerpo y radiación), OA1.2 (punto de frotado, tapado y apoyo: predicciones contrastadas con el instrumento real).</p>
+<section id="por-qué-el-arco-no-chirría-cuando-el-violinista-sabe-lo-que-hace" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-el-arco-no-chirría-cuando-el-violinista-sabe-lo-que-hace">¿Por qué el arco no chirría (cuando el violinista sabe lo que hace)?</h2>
+<p>La sesión 10 dejó una pregunta incómoda en el ticket de salida: un golpe entrega energía una vez y el sonido decae; el arco entrega energía <em>todo el tiempo</em> — ¿por qué entonces una cuerda frotada no suena como un chirrido continuo, sino como una nota estable y afinada?</p>
+<p>La respuesta empieza por admitir que el arco, en el fondo, <em>sí</em> chirría. Frotar dos superficies produce siempre el mismo fenómeno a tirones que usted conoce de las puertas viejas, los frenos de una bicicleta y el dedo mojado en el borde de la copa (que frotamos en s10): las superficies se <strong>agarran</strong>, se deforman acumulando tensión, y cuando la fuerza acumulada supera lo que el agarre resiste, <strong>se sueltan</strong> y deslizan hasta volver a agarrarse. La física distingue dos fricciones: la de agarre (estática), más fuerte, y la de deslizamiento (cinética), más débil. Esa asimetría es la que produce el ciclo <em>pegar-soltar</em> — en inglés, <strong>stick-slip</strong> — y la resina que los cuerdistas pasan por el arco existe precisamente para exagerarla: agarre feroz, deslizamiento fácil.</p>
+<p>En la puerta que chirría, ese ciclo se repite a un ritmo desordenado que depende de la presión, de la velocidad, de la humedad — por eso el chirrido es un ruido. La pregunta correcta no es por qué el arco chirría, sino <strong>por qué el chirrido de la cuerda sale ordenado</strong>.</p>
+</section>
+<section id="la-cuerda-pone-el-metrónomo" class="level2">
+<h2 class="anchored" data-anchor-id="la-cuerda-pone-el-metrónomo">La cuerda pone el metrónomo</h2>
+<p>Lo que distingue a la cuerda de la puerta es que la cuerda es un resonador afinado — el sistema con “opinión propia” de s10 —, y en cada soltar la cuerda no se queda quieta: la sacudida viaja por ella, se refleja en los extremos y <strong>vuelve al punto de contacto</strong> un tiempo después, un tiempo fijado por la longitud y la tensión de la cuerda, no por el arco. Y esa sacudida que vuelve es la que arranca la cuerda del agarre: dispara el siguiente soltar.</p>
+<p>El resultado es que la fricción deja de mandar sobre su propio ritmo. El ciclo pegar-soltar queda <strong>esclavizado al viaje de ida y vuelta de la onda por la cuerda</strong>, es decir, al período propio de la cuerda: la misma <span class="math inline">f_1</span> que la cuerda tendría pulsada. Benade (1990, cap. 23, secs. 23.1–23.2) llama a esta situación <strong>régimen de oscilación</strong>: la fuente de energía (la fricción) es tonta y desordenada, pero el resonador le impone su calendario. La nota estable de un violín es un chirrido con metrónomo — y el metrónomo es la cuerda.</p>
+<p>Esta es la idea que organiza todo el bloque C del curso: una <strong>oscilación auto-sostenida</strong> necesita una fuente continua de energía (el brazo que empuja el arco), una <strong>válvula</strong> que la entregue en porciones (la fricción que pega y suelta) y un <strong>resonador</strong> que gobierne a la válvula (la cuerda). En s12 cambiaremos la válvula — no habrá nada que pegue ni suelte — y el esquema seguirá funcionando.</p>
+<p>De aquí salen dos consecuencias inmediatas que la sesión puso a prueba. Primero: apretar más el arco <strong>no sube la nota</strong> — la afinación es de la cuerda; la presión y la velocidad del arco cambian el timbre y, si se salen del rango donde el régimen se sostiene, rompen la nota en graznido (presión excesiva, arco lento) o la adelgazan a un silbido superficial (arco veloz y liviano): las tres versiones que la escucha del día mostró con la misma cuerda. Segundo: como la fricción <strong>repone energía en cada ciclo</strong>, el espectro rico no decae: la frotada sostiene lo que la pulsada (s04) solo tiene un instante después del ataque. Por eso el violín puede hacer <em>crescendo</em> en una nota larga y la guitarra no.</p>
+</section>
+<section id="la-esquina-invisible" class="level2">
+<h2 class="anchored" data-anchor-id="la-esquina-invisible">La esquina invisible</h2>
+<p>¿Y qué forma tiene la cuerda mientras hace todo esto? La intuición — y más de una ilustración — dibuja una curva suave que ondula. La realidad, descubierta por Helmholtz en la década de 1860 mirando la cuerda con un microscopio estroboscópico, es más extraña y más elegante: en cada instante la cuerda son <strong>dos segmentos rectos unidos en una esquina</strong>, y esa esquina viaja, recorriendo el óvalo que el ojo ve borroso, una vuelta completa por cada período de la nota (BEN 23.4; C&amp;G cap. 6, pp.&nbsp;203–232). El ojo no la ve porque a cientos de vueltas por segundo solo queda la envolvente; la cámara lenta del taller — si la del celular alcanza a resolverla <strong>[POR VERIFICAR]</strong> — o el video de respaldo la muestran (candidatos verificados jul-2026: “Helmholtz Motion of a Violin G-String — 18.750 fps High-Speed Visualization”, canal peteroshkai, <a href="https://www.youtube.com/shorts/WcRbQmNNeRw" class="uri">https://www.youtube.com/shorts/WcRbQmNNeRw</a>; y “Bowed violin string in slow motion”, canal ViolinB0W, <a href="https://www.youtube.com/watch?v=6JeyiM0YNo4" class="uri">https://www.youtube.com/watch?v=6JeyiM0YNo4</a>). La figura 1 congela seis instantes de una vuelta.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s11_helmholtz_esquina.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 1.</strong> Seis instantáneas de un período del movimiento de Helmholtz (esquemático; el arco se dibuja a <span class="math inline">2/10</span> del largo desde el puente, más lejos que en un violín real, para que se vea). En cada instante la cuerda son dos rectas unidas en una esquina que recorre la envolvente punteada — el óvalo que el ojo ve borroso — una vuelta completa por período. El punto azul es el punto frotado: va pegado al arco mientras la esquina viaja por el lado del dedo, y desliza solo mientras ella pasa por el lado del puente.</figcaption>
+</figure>
+</div>
+<p>El movimiento de Helmholtz une las dos mitades de la historia. En el punto donde el arco toca la cuerda, el paso de la esquina es exactamente el evento que dispara el soltar: mientras la esquina viaja, la cuerda va pegada al arco, moviéndose lenta con él; cuando la esquina pasa, la cuerda se suelta y desliza rápido en contra, hasta que la esquina completa la vuelta y el agarre la recaptura. <strong>Una vuelta de la esquina = un soltar</strong>: el dibujo de la demo y el ciclo de fricción son el mismo reloj visto desde dos lados.</p>
+<blockquote class="blockquote">
+<p><strong>Recuadro opcional (para quienes quieren el detalle).</strong> Si el arco frota a una fracción <span class="math inline">\beta</span> de la longitud de la cuerda medida desde el puente (por ejemplo <span class="math inline">\beta = 1/10</span>), el punto frotado pasa pegado al arco una fracción <span class="math inline">1-\beta</span> del período y desliza solo la fracción <span class="math inline">\beta</span> restante: deslizamientos breves y veloces, agarres largos y lentos, con desplazamiento neto cero en cada ciclo. Roederer (1997, Ap. I) desarrolla el mecanismo de frotamiento en forma cuantitativa; Benade (1990, sec.&nbsp;23.4) discute además los refinamientos que Raman agregó al modelo de Helmholtz a comienzos del siglo XX (deslizamientos múltiples, efecto de la presión del arco).</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s11_stick_slip.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 2.</strong> El mismo reloj visto desde dos lados (esquemático). Arriba: desplazamiento del punto frotado — sube lento mientras va pegado al arco (la pendiente es la velocidad del arco) y cae rápido al deslizar, con desplazamiento neto cero en cada ciclo. Abajo: fuerza de la cuerda sobre el puente — un diente de sierra que cae bruscamente cada vez que la esquina pasa por el puente, una vez por período <span class="math inline">T = 1/f_1</span>.</figcaption>
+</figure>
+</div>
+<p>La esquina también explica el espectro (figura 2, panel inferior). Cada vez que pasa por el puente, la fuerza que la cuerda ejerce sobre él cae bruscamente y vuelve a crecer: una <strong>onda de diente de sierra</strong>, con la serie armónica completa y amplitudes que decrecen suavemente con el número del parcial (BEN 23.5). Ese es el sonido “en bruto” que la cuerda entrega al instrumento — la demo de la sesión lo sintetiza tal cual — y es la materia prima que el punto de frotado esculpe: frotar cerca del puente (<em>sul ponticello</em>) afila la esquina y carga los parciales agudos (a cambio exige más presión para que el régimen no se rompa); frotar sobre el diapasón (<em>sul tasto</em>) la redondea y da el timbre aflautado. En el taller lo midieron: los espectrogramas cambiaron de reparto de energía entre las tres posiciones, pero <span class="math inline">f_1</span> no se movió — la firma del régimen.</p>
+</section>
+<section id="la-cuerda-no-mueve-el-aire-la-cadena-completa" class="level2">
+<h2 class="anchored" data-anchor-id="la-cuerda-no-mueve-el-aire-la-cadena-completa">La cuerda no mueve el aire: la cadena completa</h2>
+<p>Nada de lo anterior se oiría sin el resto del instrumento. Una cuerda de un milímetro de espesor es, para el aire, casi invisible: al avanzar, el aire la rodea en vez de comprimirse — el elástico de s10 pulsado en el aire casi no sonaba por lo mismo. En el lenguaje de s10: la impedancia de la cuerda y la del aire están groseramente desparejadas, y sin transformador no hay traspaso.</p>
+<p>El transformador es la cadena <strong>cuerda → puente → tapa → aire</strong>. El puente es el peaje obligado: toda la energía que la cuerda exporta pasa por él como la fuerza de diente de sierra recién descrita (por eso la pinza de ropa del gancho, al agregarle masa, apagó los parciales agudos sin tocar la afinación: un transformador con preferencias, no un cable). La tapa y el fondo, movidos por el puente, sí tienen superficie para empujar aire — pero no vibran enteros como un pistón: vibran <strong>por modos</strong>, con líneas nodales y zonas en contrafase, exactamente como la sartén de s03. Campbell &amp; Greated (cap. 6, pp.&nbsp;203–232) muestran esos modos medidos uno a uno — interferogramas holográficos en la tapa de una guitarra (figura 4) y patrones de Chladni en placas de violín —: el cuerpo del instrumento es un juego de resonancias fijas que refuerza unos parciales y desatiende otros — un ecualizador de madera que le pone su firma a todo lo que la cuerda mande. Y el aire encerrado en la caja aporta su propia resonancia, que respira por las efes y ayuda a radiar los graves que una tapa de ese tamaño no podría empujar sola: la botella de s10 vive dentro del violín.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s10_acoplamiento.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 3.</strong> La cadena de acoplamiento completa (la misma figura del apunte de s10): la cuerda vibra fuerte pero mueve poco aire; el puente transforma la impedancia; la tapa y la caja, de baja impedancia, sí mueven aire y radian. La caja no agrega energía — convierte más rápido la que la cuerda le entrega.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/libros/campbell_greated_hologramas_guitarra.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 4.</strong> Vibrar “por modos” en una caja real: interferogramas holográficos de los seis primeros modos de la tapa de una guitarra, medidos por B. Richardson — (i) a (vi): 216, 268, 431, 553, 628 y 672 Hz. Cada franja oscura une puntos que vibran con la misma amplitud (≈ 1 µm entre franjas); las zonas claras y anchas casi no se mueven: son las líneas nodales. En el violín el principio es el mismo, con otras formas. Reproducida de Campbell &amp; Greated (1987), fig.&nbsp;6.14, p.&nbsp;225 (© Oxford University Press), con fines docentes.</figcaption>
+</figure>
+</div>
+<p>Dos detalles cierran la cadena. La <strong>radiación es direccional</strong>: los graves salen parejos en todas direcciones, pero los parciales agudos salen en haces que dependen del modo que los radia — por eso el instrumento cambia de brillo cuando usted camina a su alrededor (cualitativo; C&amp;G cap. 6; BEN 24.2). Y el acoplamiento puede pasarse de la raya: cuando un modo del cuerpo es tan fuerte que le disputa la energía a la cuerda en su propia frecuencia, el régimen tartamudea y la nota “aúlla” a tirones — la famosa <strong>nota lobo</strong> de cellos y violines (BEN 25.4), que en el curso queda como curiosidad, no como materia de prueba.</p>
+<p>Ajustar ese ecualizador de madera — grosores, arqueados, posición del alma — es el oficio del lutier (BEN 24.4 relata el método de afinación de placas de C. Hutchins). Ese oficio, en versión tubo y taladro, es exactamente lo que haremos en s12.</p>
+</section>
+<section id="síntesis" class="level2">
+<h2 class="anchored" data-anchor-id="síntesis">Síntesis</h2>
+<ul>
+<li>La fricción es una válvula: agarra fuerte, desliza débil. Sola, chirría sin orden; acoplada a una cuerda, el reflejo que vuelve dispara cada soltar y el ciclo queda esclavizado a la <span class="math inline">f_1</span> de la cuerda: <strong>régimen de oscilación</strong>.</li>
+<li>La cuerda frotada vibra como dos rectas y una <strong>esquina que viaja</strong> (Helmholtz): una vuelta de la esquina = un soltar. La fuerza sobre el puente es un diente de sierra: serie armónica completa, sostenida porque la fricción repone energía en cada ciclo.</li>
+<li>El punto y la presión del arco esculpen el espectro; la afinación no se mueve. Ponticello: más agudos y más riesgo de graznido; tasto: timbre aflautado.</li>
+<li>La cuerda casi no mueve aire: la cadena cuerda→puente→tapa→aire hace el trabajo. El cuerpo vibra por modos y actúa de ecualizador fijo; las efes radian los graves con el aire encerrado; los agudos salen en haces direccionales.</li>
+</ul>
+</section>
+<section id="hacia-la-sesión-12" class="level2">
+<h2 class="anchored" data-anchor-id="hacia-la-sesión-12">Hacia la sesión 12</h2>
+<p>Su ticket de salida quedó apuntando al vacío exacto que s12 llena: en la cuerda, el pegar-soltar lo hace la fricción — en una flauta no hay nada que pegue ni suelte, y sin embargo hay nota estable. ¿Qué hace de válvula? La sesión 12 es taller completo de lutería: construiremos y mediremos tubos y flautas (los materiales los pone el curso), y la serie del objeto termina ahí — lleve su bitácora al día con los dos compromisos pendientes (mapa de resonancias de s10 y protocolo de acoplamiento de esta semana).</p>
+</section>
+<section id="referencias-y-lectura-complementaria" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-y-lectura-complementaria">Referencias y lectura complementaria</h2>
+<ul>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>, 2.ª ed. Dover — cap. 23 (“The Oscillations of a Bowed String”), secs. 23.1–23.5: la fuente principal de esta sesión; cap. 24, secs. 24.1–24.2 y 24.4 (cuerpo, puente y ajuste de placas); sec.&nbsp;25.4 (la nota lobo, curiosidad).</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to Acoustics</em>. Oxford UP — cap. 6, pp.&nbsp;203–232 (el violín: arco, cuerpo, movimiento de Helmholtz y las holografías de modos proyectadas en clase).</li>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la Música</em>. Ricordi — Apéndice I (mecanismo de frotamiento, tratamiento cuantitativo opcional; en español).</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The Science of Sound</em>, 3.ª ed.&nbsp;— cap. 10, secs. 10.1–10.9 (cuerdas frotadas, cuerpo, puente), para quien quiera ejercicios.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

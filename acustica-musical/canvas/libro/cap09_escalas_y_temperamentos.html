@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>cap09_escalas_y_temperamentos – Acústica Musical · UC</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b1e7e8ee10296b6f6820b1334157194.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#capítulo-9-la-cuenta-que-no-cierra-escalas-y-temperamentos" id="toc-capítulo-9-la-cuenta-que-no-cierra-escalas-y-temperamentos" class="nav-link active" data-scroll-target="#capítulo-9-la-cuenta-que-no-cierra-escalas-y-temperamentos">Capítulo 9 — La cuenta que no cierra (escalas y temperamentos)</a>
+  <ul class="collapse">
+  <li><a href="#una-pregunta-con-trampa-dejada-por-usted-mismo" id="toc-una-pregunta-con-trampa-dejada-por-usted-mismo" class="nav-link" data-scroll-target="#una-pregunta-con-trampa-dejada-por-usted-mismo">Una pregunta con trampa, dejada por usted mismo</a></li>
+  <li><a href="#haga-usted-la-cuenta" id="toc-haga-usted-la-cuenta" class="nav-link" data-scroll-target="#haga-usted-la-cuenta">Haga usted la cuenta</a></li>
+  <li><a href="#el-cent-una-regla-para-grietas-finas" id="toc-el-cent-una-regla-para-grietas-finas" class="nav-link" data-scroll-target="#el-cent-una-regla-para-grietas-finas">El cent: una regla para grietas finas</a></li>
+  <li><a href="#dos-cents-no-se-oyen-un-batido-por-segundo-sí" id="toc-dos-cents-no-se-oyen-un-batido-por-segundo-sí" class="nav-link" data-scroll-target="#dos-cents-no-se-oyen-un-batido-por-segundo-sí">Dos cents no se oyen; un batido por segundo, sí</a></li>
+  <li><a href="#lo-que-el-compromiso-sacrificó-de-verdad" id="toc-lo-que-el-compromiso-sacrificó-de-verdad" class="nav-link" data-scroll-target="#lo-que-el-compromiso-sacrificó-de-verdad">Lo que el compromiso sacrificó de verdad</a></li>
+  <li><a href="#su-objeto-tiene-que-decidir-dónde-vivir" id="toc-su-objeto-tiene-que-decidir-dónde-vivir" class="nav-link" data-scroll-target="#su-objeto-tiene-que-decidir-dónde-vivir">Su objeto tiene que decidir dónde vivir</a></li>
+  <li><a href="#preguntas-que-la-sesión-va-a-responder" id="toc-preguntas-que-la-sesión-va-a-responder" class="nav-link" data-scroll-target="#preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión va a responder</a></li>
+  <li><a href="#referencias-del-capítulo" id="toc-referencias-del-capítulo" class="nav-link" data-scroll-target="#referencias-del-capítulo">Referencias del capítulo</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../libro/00_prologo.html">Libro — Escuchar como científico</a></li><li class="breadcrumb-item"><a href="../libro/cap09_escalas_y_temperamentos.html">Capítulo 9 — La cuenta que no cierra (escalas y temperamentos)</a></li></ol></nav></header>
+
+
+
+
+<section id="capítulo-9-la-cuenta-que-no-cierra-escalas-y-temperamentos" class="level1">
+<h1>Capítulo 9 — La cuenta que no cierra (escalas y temperamentos)</h1>
+<p><em>Lectura previa a la sesión 09. Objetivos: OA2.3 (escalas y temperamentos, demostrados audiblemente), OA1.2 (razones y cents con aritmética), OA5.2 (continúa la serie de mediciones sobre su objeto). Para la sesión necesita traer: audífonos, EL OBJETO de su proyecto y el celular con afinador y espectrograma.</em></p>
+<section id="una-pregunta-con-trampa-dejada-por-usted-mismo" class="level2">
+<h2 class="anchored" data-anchor-id="una-pregunta-con-trampa-dejada-por-usted-mismo">Una pregunta con trampa, dejada por usted mismo</h2>
+<p>Su ticket de salida de la sesión pasada quedó en manos del profesor y dice, más o menos: <em>si la quinta perfectamente lisa es la razón 3:2, ¿puede un piano tener todas sus quintas lisas a la vez?</em> Este capítulo existe para que usted llegue a la sesión con la respuesta calculada por su propia mano — porque, para variar en este curso, la respuesta no requiere más que multiplicar.</p>
+<p>Primero, recuperemos por qué 3:2. En la sesión 08 usted vio (y oyó) que la lisura de un intervalo entre dos notas reales se juega en los parciales: si el tercer armónico de la nota grave cae exactamente donde el segundo armónico de la aguda, no hay nada que bata; si cae <em>casi</em> donde, hay un batido lento — ese que usted aprendió a contar en la sesión 07. La coincidencia exacta ocurre solo si las fundamentales guardan una razón de enteros pequeños: 2:1 la octava, 3:2 la quinta, 4:3 la cuarta, 5:4 la tercera mayor dulce. De aquí sale la idea madre del capítulo: <strong>un intervalo es una razón entre frecuencias, no una diferencia</strong>. Subir una octava es multiplicar por 2; subir dos octavas es multiplicar por 4. Los intervalos se apilan multiplicando.</p>
+</section>
+<section id="haga-usted-la-cuenta" class="level2">
+<h2 class="anchored" data-anchor-id="haga-usted-la-cuenta">Haga usted la cuenta</h2>
+<p>Ahora sí, el ticket. Parta de un Do cualquiera y apile quintas justas, una sobre otra: Do–Sol, Sol–Re, Re–La, La–Mi… Si conoce el círculo de quintas sabe cómo termina el paseo: después de 12 quintas los nombres de las notas se agotaron y usted está de nuevo en un Do — siete octavas arriba del punto de partida.</p>
+<p>Aquí viene la multiplicación prometida. Si las 12 quintas fueron justas, la frecuencia final es la inicial multiplicada 12 veces por 3/2. Si las siete octavas mandan, debería ser la inicial multiplicada 7 veces por 2, es decir por 128. Tome la calculadora del celular y haga ambas cuentas antes de seguir leyendo. En serio: son dos teclas.</p>
+<p>¿Ya? <span class="math inline">(3/2)^{12} \approx 129{,}75</span>. Y <span class="math inline">2^7 = 128</span>. <strong>No da lo mismo.</strong> Las doce quintas se pasan de largo (figura 1).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/figuras/s09_coma_pitagorica.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 1.</strong> Dos escaleras que no cierran: apilar doce quintas justas (×3/2) llega más arriba que siete octavas (×2). Medida en cents, la diferencia — la <strong>coma pitagórica</strong>, ≈ 23,5 cents, un cuarto de semitono — es el excedente que ningún teclado de 12 notas puede hacer desaparecer sin sacrificar algo.</figcaption>
+</figure>
+</div>
+<p>El excedente parece pequeño — 129,75 contra 128, un 1,4 % — pero en afinación un 1,4 % es un mundo: es la <strong>coma pitagórica</strong>, y es la razón estructural por la que la respuesta a su ticket es <strong>no</strong>. En un teclado de 12 notas con octavas puras es aritméticamente imposible que todas las quintas sean justas. No es un problema de destreza del afinador ni de calidad del piano: es un teorema. Algo hay que sacrificar, y la historia de la afinación occidental es la historia de las distintas maneras de elegir la víctima. Esas maneras tienen nombre: <strong>temperamentos</strong>.</p>
+</section>
+<section id="el-cent-una-regla-para-grietas-finas" class="level2">
+<h2 class="anchored" data-anchor-id="el-cent-una-regla-para-grietas-finas">El cent: una regla para grietas finas</h2>
+<p>Para hablar de sacrificios de este tamaño, las razones se vuelven incómodas. La regla estándar es el <strong>cent</strong>: se divide el semitono del piano en 100 partes iguales, de modo que el semitono mide 100 cents y la octava 1200. Lo cómodo del cent es que con él <strong>apilar intervalos es sumar</strong>, no multiplicar. La quinta justa 3:2 mide ~702 cents, y la cuenta que usted acaba de hacer con potencias se convierte en aritmética de almacén:</p>
+<ul>
+<li>12 quintas justas: 12 × 702 = <strong>8424</strong> cents.</li>
+<li>7 octavas: 7 × 1200 = <strong>8400</strong> cents.</li>
+</ul>
+<p>Sobran unos 24 cents (el valor fino es 23,5): la coma pitagórica es <strong>un cuarto de semitono</strong>, aproximadamente. Para calibrar cuánto es eso: un coro que termina un cuarto de semitono abajo de donde empezó no pasa inadvertido.</p>
+<p>El temperamento del piano moderno — el <strong>temperamento igual</strong> — opta por el reparto parejo: divide la coma en 12 partes iguales y estrecha cada quinta en 23,5/12 ≈ <strong>2 cents</strong>. El resultado es de una elegancia burocrática: ninguna quinta es justa, ninguna tonalidad es especial, todo es igualmente usable e igualmente imperfecto. La pregunta que queda flotando — y que la sesión ataca con los oídos — es qué se siente esa imperfección, y cómo diablos se <em>construye</em> una quinta estrechada exactamente 2 cents usando solo el oído.</p>
+</section>
+<section id="dos-cents-no-se-oyen-un-batido-por-segundo-sí" class="level2">
+<h2 class="anchored" data-anchor-id="dos-cents-no-se-oyen-un-batido-por-segundo-sí">Dos cents no se oyen; un batido por segundo, sí</h2>
+<p>Aquí conviene adelantar la pista clave, porque es el corazón del taller de la sesión: <strong>2 cents es una desafinación inaudible como altura, pero perfectamente audible como batido</strong>. Si dos notas sostenidas forman una quinta casi justa, el par de parciales que casi coincide produce un batido lento — y la velocidad de ese batido delata, con precisión brutal, cuánto le falta o le sobra al intervalo. El punto exactamente sin batidos es la quinta justa; una quinta del temperamento igual, en el registro central del piano, late aproximadamente <strong>una vez por segundo</strong>. Los afinadores profesionales afinaron pianos así durante dos siglos, sin pantalla alguna: anulando batidos y luego sembrándolos a la velocidad prescrita, con un reloj en el oído (Benade 1990, sec.&nbsp;16.2, describe el oficio completo).</p>
+<p>En la sesión usted va a hacer exactamente eso, con audífonos y un oscilador afinable: recibir una quinta desafinada al azar, dejarla lisa, y luego estrecharla hasta que lata al tempo del temperamento. Dos predicciones que conviene traer escritas: ¿a cuántos cents del objetivo cree que caerá su “sin batidos”? ¿Y será más fácil o más difícil repetir la hazaña con una tercera mayor? No le adelantamos los resultados — son suyos —, pero sí el veredicto general: le va a sorprender de qué lado está la dificultad.</p>
+</section>
+<section id="lo-que-el-compromiso-sacrificó-de-verdad" class="level2">
+<h2 class="anchored" data-anchor-id="lo-que-el-compromiso-sacrificó-de-verdad">Lo que el compromiso sacrificó de verdad</h2>
+<p>Porque las quintas, con sus 2 cents, salieron casi gratis. La cuenta pendiente del temperamento igual se paga en otra parte: las <strong>terceras</strong>. La tercera mayor dulce — la razón 5:4 que hace coincidir parciales — mide ~386 cents; la tercera del piano mide 400. Catorce cents de diferencia, siete veces el sacrificio de la quinta, y su batido en el registro central no es un vaivén elegante sino un temblor de unas diez veces por segundo. Las terceras que usted ha oído toda su vida <em>muelen</em> — y es casi seguro que usted nunca lo había notado, porque el oído se acostumbra a lo que la cultura le sirve. En la sesión va a escuchar el mismo acorde mayor afinado según tres reglas distintas, y le pedimos desde ya honestidad en la votación: ¿cuál le suena “afinado”?</p>
+<p>Las tres reglas que va a comparar tienen siglos de historia. La <strong>pitagórica</strong> apila quintas justas y deja las terceras anchísimas (~408 cents). La <strong>entonación justa</strong> fabrica terceras perfectas de 5:4 — el acorde mayor más terso que existe — pero rompe otras quintas en el proceso: sirve para un coro o un cuarteto de cuerdas que ajustan nota a nota en tiempo real, no para un teclado de afinación fija. Y entre ambas vive la familia de los <strong>temperamentos históricos</strong> (Werckmeister es el nombre que verá citado), que reparten la coma en partes <em>desiguales</em>: todas las tonalidades resultan tocables, pero cada una con proporciones levemente propias — cada tonalidad con su color. Cuando los tratados barrocos atribuyen carácter a las tonalidades, hay detrás algo más que literatura.</p>
+<p>Una nota al pie que se volverá relevante para su proyecto: hasta el punto de partida es convención. El La de 440 Hz con que hoy se afina una orquesta es un acuerdo del siglo XX; el estándar de altura varió ampliamente según época y ciudad (Roederer 1997, sec.&nbsp;5.4). La física no dicta ni dónde empezar ni cómo repartir la coma; dicta solamente qué batirá, y cuánto, bajo cada regla.</p>
+</section>
+<section id="su-objeto-tiene-que-decidir-dónde-vivir" class="level2">
+<h2 class="anchored" data-anchor-id="su-objeto-tiene-que-decidir-dónde-vivir">Su objeto tiene que decidir dónde vivir</h2>
+<p>El segundo módulo de la sesión continúa la serie de mediciones sobre el objeto de su proyecto, y la pregunta de esta semana se desprende de todo lo anterior: <strong>¿en qué escala vive su objeto?</strong> Con el afinador y el espectrograma va a medir las alturas que produce, expresarlas como nota más desviación en cents, y emitir un veredicto: ¿está afinado respecto de alguna regla? ¿Corrido cuántos cents? ¿Y qué habría que cambiarle — longitud, tensión, masa, agujeros — para moverlo? Note el salto respecto de la radiografía de s08: ya no basta describir el espectro; ahora hay que juzgarlo contra una vara y proponer la corrección física. Ese veredicto entra a la bitácora y es insumo directo del <strong>hito 2</strong>, que se entrega la próxima sesión. Traiga el objeto aunque siga a medio construir: un objeto corrido 40 cents con explicación vale más que uno “afinado” sin medición que lo respalde.</p>
+</section>
+<section id="preguntas-que-la-sesión-va-a-responder" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión va a responder</h2>
+<ol type="1">
+<li>¿Puede un piano tener todas sus quintas justas a la vez? (Usted ya hizo la cuenta — la sesión le pone sonido al resultado.)</li>
+<li>¿Con qué precisión puede afinar SU oído usando batidos: a cuántos cents del objetivo cae usted al anular un batido, y puede construir una quinta temperada contando ~1 batido por segundo?</li>
+<li>¿Por qué anular el batido de una tercera mayor es otra historia que anular el de una quinta?</li>
+<li>Un mismo acorde mayor en entonación justa, pitagórica y temperada: ¿cuál vota usted como “el afinado” — y qué dice esa votación sobre su oído y su cultura?</li>
+<li>¿En qué escala vive su objeto, cuántos cents está corrido, y qué cambio físico lo afinaría?</li>
+</ol>
+</section>
+<section id="referencias-del-capítulo" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Benade (1990), cap. 15, secs. 15.2–15.3 — origen acústico de las escalas y temperamento igual; cap. 16, secs. 16.1–16.4 — escalas justas, afinación por batidos, Werckmeister III y el color de las tonalidades.</li>
+<li>Campbell &amp; Greated (1987), cap. 4 (pp.&nbsp;165–182) — consonancia, origen de las escalas, entonación justa y escalas temperadas; cap. 7 — afinación de instrumentos de teclado.</li>
+<li>Roederer (1997), secs. 5.3–5.5 (dentro de pp.&nbsp;180–211) — escalas, estándar de altura y por qué existen; sec.&nbsp;2.6 — batidos de consonancias desafinadas. En español.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), cap. 9 (secs. 9.1–9.9) — escalas, temperamentos y cents, con ejercicios numéricos (opcional).</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

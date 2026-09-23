@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>apunte_s06_sonoridad_y_decibel – Acústica Musical · UC</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1b1e7e8ee10296b6f6820b1334157194.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#sonoridad-y-decibel-medir-lo-fuerte" id="toc-sonoridad-y-decibel-medir-lo-fuerte" class="nav-link active" data-scroll-target="#sonoridad-y-decibel-medir-lo-fuerte">Sonoridad y decibel: medir lo fuerte</a>
+  <ul class="collapse">
+  <li><a href="#cuánto-es-el-doble-de-fuerte" id="toc-cuánto-es-el-doble-de-fuerte" class="nav-link" data-scroll-target="#cuánto-es-el-doble-de-fuerte">¿Cuánto es “el doble de fuerte”?</a></li>
+  <li><a href="#el-decibel-una-escala-para-un-oído-que-compara-multiplicando" id="toc-el-decibel-una-escala-para-un-oído-que-compara-multiplicando" class="nav-link" data-scroll-target="#el-decibel-una-escala-para-un-oído-que-compara-multiplicando">El decibel: una escala para un oído que compara multiplicando</a></li>
+  <li><a href="#dos-guitarras-no-suenan-el-doble-de-fuerte" id="toc-dos-guitarras-no-suenan-el-doble-de-fuerte" class="nav-link" data-scroll-target="#dos-guitarras-no-suenan-el-doble-de-fuerte">Dos guitarras no suenan el doble de fuerte</a></li>
+  <li><a href="#por-qué-la-mezcla-suave-pierde-el-bajo" id="toc-por-qué-la-mezcla-suave-pierde-el-bajo" class="nav-link" data-scroll-target="#por-qué-la-mezcla-suave-pierde-el-bajo">¿Por qué la mezcla suave pierde el bajo?</a></li>
+  <li><a href="#medir-con-juicio-la-app-el-sonómetro-y-la-ponderación-a" id="toc-medir-con-juicio-la-app-el-sonómetro-y-la-ponderación-a" class="nav-link" data-scroll-target="#medir-con-juicio-la-app-el-sonómetro-y-la-ponderación-a">Medir con juicio: la app, el sonómetro y la ponderación A</a></li>
+  <li><a href="#el-oído-no-tiene-párpados" id="toc-el-oído-no-tiene-párpados" class="nav-link" data-scroll-target="#el-oído-no-tiene-párpados">El oído no tiene párpados</a></li>
+  <li><a href="#síntesis" id="toc-síntesis" class="nav-link" data-scroll-target="#síntesis">Síntesis</a></li>
+  <li><a href="#hacia-la-sesión-07" id="toc-hacia-la-sesión-07" class="nav-link" data-scroll-target="#hacia-la-sesión-07">Hacia la sesión 07</a></li>
+  <li><a href="#referencias-y-lectura-complementaria" id="toc-referencias-y-lectura-complementaria" class="nav-link" data-scroll-target="#referencias-y-lectura-complementaria">Referencias y lectura complementaria</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../curso/sesion-06/apunte_s06_sonoridad_y_decibel.html">Sesión 06 — Sonoridad y decibel</a></li><li class="breadcrumb-item"><a href="../../curso/sesion-06/apunte_s06_sonoridad_y_decibel.html">Sonoridad y decibel: medir lo fuerte</a></li></ol></nav></header>
+
+
+
+
+<section id="sonoridad-y-decibel-medir-lo-fuerte" class="level1">
+<h1>Sonoridad y decibel: medir lo fuerte</h1>
+<p><strong>Sesión 06</strong> · Curso Acústica Musical UC <strong>Objetivos que cubre</strong>: OA4.2 (medir niveles e interpretar el decibel y las curvas de sonoridad en contextos musicales; salud auditiva), OA2.1 (el par intensidad↔︎sonoridad no es lineal ni unívoco).</p>
+<section id="cuánto-es-el-doble-de-fuerte" class="level2">
+<h2 class="anchored" data-anchor-id="cuánto-es-el-doble-de-fuerte">¿Cuánto es “el doble de fuerte”?</h2>
+<p>En la sesión 5 quedó establecido que la altura no copia la frecuencia: el oído reconstruye un patrón y hasta oye un bajo que el parlante no radia. Esta sesión repitió la jugada con el otro par del ticket de salida: <strong>la intensidad es del sonido; la sonoridad es suya</strong>. Dos sonidos con la misma frecuencia pueden oírse a volúmenes completamente distintos — eso era lo fácil. Lo incómodo era la segunda pregunta: un grave y un agudo con exactamente la misma energía física <em>no</em> suenan igual de fuertes. Usted lo comprobó dibujando su propia curva isofónica, y lo había oído al comienzo: la misma mezcla musical, reproducida muy suave, pierde el bajo y el brillo, aunque en la señal siguen estando.</p>
+<p>Para hablar de esto con números primero hay que medir el lado físico. La <strong>intensidad</strong> de un sonido es la energía que atraviesa cada segundo una superficie dada; en la práctica de esta sesión trabajamos con su prima medible, la <strong>presión sonora</strong> <span class="math inline">p</span> (en pascales), que es lo que detectan el tímpano, el micrófono y la app del celular. Y aquí aparece el primer dato asombroso del día: entre el sonido más débil que un oído sano alcanza a detectar y el nivel que ya duele hay un factor de alrededor de <strong>un millón de millones (10¹²) en intensidad</strong> (Benade 1990, sec.&nbsp;13.1; ROS cap. 6). Ningún instrumento de medición cómodo, y ningún sistema perceptual razonable, trabaja con un rango así en escala lineal.</p>
+</section>
+<section id="el-decibel-una-escala-para-un-oído-que-compara-multiplicando" class="level2">
+<h2 class="anchored" data-anchor-id="el-decibel-una-escala-para-un-oído-que-compara-multiplicando">El decibel: una escala para un oído que compara multiplicando</h2>
+<p>La solución de la acústica es la misma que adoptó el oído: en vez de <em>sumar</em> energía, <strong>comparar por factores</strong>. El <strong>decibel</strong> no es una cantidad de sonido sino una forma de expresar la razón entre dos sonidos (Benade 1990, sec.&nbsp;13.2). Su gramática completa, con la aritmética mínima del curso:</p>
+<ul>
+<li><strong>+10 dB significa ×10 en intensidad.</strong> +20 dB, ×100. +30 dB, ×1000: cada 10 dB se agrega un cero al factor.</li>
+<li><strong>+3 dB significa ×2 en intensidad</strong> — y perceptualmente es un cambio chico, un pasito de volumen.</li>
+<li>Para que algo suene aproximadamente <strong>el doble de fuerte</strong> se necesita alrededor de <strong>+10 dB</strong>, es decir, diez veces más energía (Benade 1990, sec.&nbsp;13.4).</li>
+</ul>
+<p>Para convertir el dB en un nivel absoluto solo falta acordar con qué se compara. La referencia universal es una presión de <strong>20 µPa</strong> (veinte millonésimas de pascal), elegida porque coincide más o menos con el umbral de audición a 1000 Hz — Benade la recuerda como “1/3.530.000.000 de la presión atmosférica” (sec.&nbsp;13.1). El <strong>nivel de presión sonora</strong> se anota entonces <span class="math inline">L_p</span> en <strong>dB SPL re 20 µPa</strong> (notación de <code>PLAN_SEMESTRE.md</code>), y con la referencia puesta en el umbral, la escala queda humana: 0 dB SPL es apenas audible y unos 120 dB SPL rozan el dolor (Benade 1990, sec.&nbsp;13.8). Entre medio caben, en rangos aproximados, un susurro (~30 dB), una conversación (~60 dB), y una orquesta o una banda en fortissimo (~95–110 dB) (ROS cap. 6; valores típicos, no medidos en nuestras salas — los de nuestras salas los está midiendo usted).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s06_escala_decibel.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 1.</strong> La escala de niveles de presión sonora con hitos musicales, del umbral de audición al umbral del dolor. Los valores son típicos y redondeados (no medidos en nuestras salas). A la derecha, la gramática del decibel: +10 dB multiplican por diez la intensidad (y suenan como el doble), +3 dB la duplican (cambio chico).</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><strong>Recuadro opcional (para quienes quieren la fórmula).</strong> El nivel se define como <span class="math inline">L_p = 20\log_{10}(p/p_0)</span> con <span class="math inline">p_0 = 20\ \mu</span>Pa, o equivalentemente <span class="math inline">10\log_{10}(I/I_0)</span> sobre intensidades. De ahí que ×10 en presión sean +20 dB pero ×10 en intensidad sean +10 dB: la intensidad va como el cuadrado de la presión, y duplicar la amplitud de presión da +6 dB (Benade 1990, sec.&nbsp;13.2, fig.&nbsp;13.2). En el curso basta la tabla de reglas; la fórmula es para el que la disfrute.</p>
+</blockquote>
+</section>
+<section id="dos-guitarras-no-suenan-el-doble-de-fuerte" class="level2">
+<h2 class="anchored" data-anchor-id="dos-guitarras-no-suenan-el-doble-de-fuerte">Dos guitarras no suenan el doble de fuerte</h2>
+<p>Las estaciones dejaron un resultado que contradice la intuición aritmética: al hacer sonar <strong>dos fuentes iguales</strong>, el medidor no duplicó nada visible — subió unos <strong>+3 dB</strong>. Las presiones de fuentes independientes no se suman de frente: se combinan estadísticamente (como la raíz de la suma de los cuadrados, Benade 1990, sec.&nbsp;13.2), de modo que duplicar las fuentes duplica la <em>energía</em>, no la amplitud. Y como +3 dB está lejos del +10 dB del “doble de fuerte”, la consecuencia musical es fuerte: <strong>se necesitan unas diez fuentes iguales para que algo suene el doble de fuerte, y unas cien para el cuádruple</strong> (Benade 1990, sec.&nbsp;13.5) (figura 2).</p>
+<p><img src="../../assets/figuras/s06_suma_fuentes.svg" class="img-fluid" alt="Figura 2. El nivel crece como 10\log_{10}N al sumar N fuentes iguales: duplicarlas agrega solo +3 dB (un cambio chico), y hacen falta diez para el doble de sonoridad (+10 dB) y cien para el cuádruple (+20 dB)."> Por eso duplicar los violines de una orquesta engorda el sonido mucho más de lo que lo agranda, y por eso el crescendo de verdad se hace tocando más fuerte, no sumando atriles.</p>
+</section>
+<section id="por-qué-la-mezcla-suave-pierde-el-bajo" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-la-mezcla-suave-pierde-el-bajo">¿Por qué la mezcla suave pierde el bajo?</h2>
+<p>La segunda mitad del cuento es que el oído no es un medidor plano: su sensibilidad <strong>depende de la frecuencia, y de manera distinta según el nivel</strong>. Las <strong>curvas isofónicas</strong> (curvas de igual sonoridad, graduadas en <strong>fones</strong>) mapean cuántos dB SPL hacen falta, en cada frecuencia, para igualar la sonoridad de un tono de 1000 Hz. Su forma general — que usted reprodujo a su manera en la demo — dice que somos relativamente sordos a los graves (y a los muy agudos), y que esa sordera <strong>se agrava a niveles bajos</strong> (Benade 1990, secs. 13.3–13.4; C&amp;G cap. 3, sección <em>Loudness</em>; ROE sec.&nbsp;3.4) (figura 3).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s06_isofonicas_esquema.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 3.</strong> Curvas de igual sonoridad (esquema cualitativo, según las curvas normalizadas). Cada curva marca cuántos dB SPL hacen falta en cada frecuencia para igualar la sonoridad de un tono de 1000 Hz. Cuanto más bajo el nivel (curva de 20 fon), más empinada es la subida hacia los graves: por eso una mezcla suave “pierde” el bajo primero.</figcaption>
+</figure>
+</div>
+<p>Eso resuelve la escucha del día: al bajar el volumen, todos los componentes bajan los mismos dB, pero los graves caen más rápido hacia el umbral que el registro medio. La mezcla no perdió el bajo: <strong>su oído lo soltó primero</strong>. El mismo mecanismo explica el botón “loudness” de los equipos antiguos, y la advertencia de Benade (sec.&nbsp;13.4) de que ecualizar todo a igual sonoridad produce música de bajos y agudos artificiales: los arreglos y las mezclas ya cuentan con las isofónicas puestas.</p>
+<p>De aquí salen dos unidades perceptuales que en el curso se usan solo cualitativamente. El <strong>fon</strong> etiqueta cada isofónica con el nivel que tiene a 1000 Hz. El <strong>son</strong> mide la sonoridad misma: 1 son es la sonoridad de un tono de 1000 Hz a 40 dB SPL, y — a diferencia de los decibeles — <strong>los sones se suman como cantidades ordinarias</strong>: 2 sones más 3 sones se oyen como 5 sones (Benade 1990, sec.&nbsp;13.4). La regla “+10 dB ≈ doble sonoridad” es exactamente “×2 en sones”.</p>
+</section>
+<section id="medir-con-juicio-la-app-el-sonómetro-y-la-ponderación-a" class="level2">
+<h2 class="anchored" data-anchor-id="medir-con-juicio-la-app-el-sonómetro-y-la-ponderación-a">Medir con juicio: la app, el sonómetro y la ponderación A</h2>
+<p>Lo que usted usó en el celular imita al <strong>sonómetro</strong> clásico (Benade 1990, sec.&nbsp;13.8): un micrófono, un filtro y un indicador en dB. El filtro es la <strong>ponderación A</strong> — una curva que atenúa los graves imitando a grandes rasgos la isofónica de nivel bajo — y por eso las apps reportan <strong>dB(A)</strong>. Basta saber leerla: dB(A) descuenta lo que el oído descuenta; la teoría del filtro no es materia del curso. Las reglas de higiene de la medición salieron solas en las estaciones:</p>
+<ul>
+<li>El micrófono del celular <strong>no está calibrado</strong>: los valores absolutos pueden errar en varios dB (<a href="../../apps_recomendadas.html"><code>material/apps_recomendadas.md</code></a>), y dos celulares lado a lado pueden discrepar. Las <strong>comparaciones relativas con el mismo aparato</strong> — ¿cuánto subió?, ¿cuál punto de la sala es más ruidoso? — sí son confiables.</li>
+<li>Anotar siempre <strong>las condiciones</strong>: qué app, qué celular, a qué distancia, ponderación usada. Un número sin condiciones no es un dato.</li>
+<li>El sonómetro <strong>no mide sonoridad</strong> (no sabe de enmascaramiento ni de sones, Benade 1990, sec.&nbsp;13.8): mide un nivel ponderado. Es una herramienta honesta si uno no le pide lo que no da.</li>
+</ul>
+</section>
+<section id="el-oído-no-tiene-párpados" class="level2">
+<h2 class="anchored" data-anchor-id="el-oído-no-tiene-párpados">El oído no tiene párpados</h2>
+<p>La misma aritmética del dB gobierna la <strong>salud auditiva del músico</strong>, y aquí deja de ser un juego de proporciones. El criterio de referencia ocupacional más citado admite del orden de <strong>8 horas diarias a 85 dB(A)</strong>, y cada <strong>+3 dB</strong> (el doble de energía) <strong>corta el tiempo admisible a la mitad</strong>: 88 dB(A) → 4 h, 91 → 2 h, 94 → 1 h (criterio NIOSH; ROS caps. 30–31). Un ensayo intenso puede vivir en los 90 y tantos dB(A) y una banda amplificada bastante más arriba: la dosis se gasta rápido, y el daño por exposición acumulada es indoloro y no se recupera. Los valores límite de la norma chilena aplicable van en la misma línea: el <strong>DS 594</strong> (Ministerio de Salud, 1999, arts. 74–75, vigente en 2026) fija idéntico tope — 85 dB(A) lento por 8 horas — y construye su tabla de tiempos admisibles con la <strong>misma regla de intercambio de 3 dB</strong> (no de 5 dB). Las decisiones prácticas que sí están al alcance salieron en la estación E5: medir el propio ensayo, alejarse de la fuente cuando se pueda, y usar protectores (los de músico atenúan de forma más pareja que la espuma) — unos 15–25 dB de atenuación típica (rango de referencia de los protectores de músico de atenuación plana, tipo ER-15/ER-20, y de tapones y orejeras de uso comercial en su atenuación efectiva de terreno) compran, por la regla de los 3 dB, muchas veces más tiempo.</p>
+</section>
+<section id="síntesis" class="level2">
+<h2 class="anchored" data-anchor-id="síntesis">Síntesis</h2>
+<ul>
+<li>Intensidad/presión son del sonido; la <strong>sonoridad</strong> es del oyente. El par, como el de s05, no es lineal ni unívoco.</li>
+<li>El dB compara por factores: <strong>+10 dB = ×10 intensidad ≈ doble sonoridad; +3 dB = ×2 intensidad, cambio chico</strong>. <span class="math inline">L_p</span> en dB SPL re 20 µPa; 0 dB ≈ umbral, ~120 dB ≈ dolor.</li>
+<li>Dos fuentes iguales → +3 dB; <strong>diez</strong> fuentes para el doble de sonoridad.</li>
+<li>Las <strong>isofónicas</strong> muestran un oído sordo a los graves, peor a bajo nivel: por eso la mezcla suave pierde el bajo, y por eso las apps ponderan en dB(A).</li>
+<li>Medir con juicio: condiciones anotadas, comparaciones relativas con el mismo aparato, y la dosis auditiva vigilada (85 dB(A)/8 h; −mitad cada +3 dB).</li>
+</ul>
+</section>
+<section id="hacia-la-sesión-07" class="level2">
+<h2 class="anchored" data-anchor-id="hacia-la-sesión-07">Hacia la sesión 07</h2>
+<p>La sesión 7 abre con la <strong>prueba 1</strong> (módulo 1): entra todo s01–s06, lo de hoy en su versión básica — leer un nivel, aplicar +10/+3, interpretar una isofónica. Y su ticket de salida dejó sembrado el módulo 2: dos flautas en la misma nota, una apenas desafinada. ¿Qué se oye? Algo que no es ni una nota ni dos, y que late. Traiga los oídos descansados.</p>
+</section>
+<section id="referencias-y-lectura-complementaria" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-y-lectura-complementaria">Referencias y lectura complementaria</h2>
+<ul>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>, 2.ª ed. Dover — cap. 13, secs. 13.1–13.5 (umbrales, decibel, sones, suma de fuentes) y 13.8 (sonómetro y ponderaciones); experimentos en 13.9 (EEQ).</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to Acoustics</em>. Oxford UP — cap. 3, sección <em>Loudness</em> (pp.&nbsp;69–164 del capítulo completo).</li>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la Música</em>. Ricordi — cap. 3, secs. 3.4–3.5 (pp.&nbsp;79–119): intensidad, nivel y mecanismo de percepción de sonoridad; en español.</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The Science of Sound</em>, 3.ª ed.&nbsp;— cap. 6 (dB, fones, sones: el banco de ejercicios de la prueba) y caps. 30–31 (niveles ambientales y efectos del ruido).</li>
+<li>Wolfe, J. (UNSW, School of Physics). <em>Hearing test — equal loudness curves</em>, <a href="https://newt.phys.unsw.edu.au/jw/hearing.html">newt.phys.unsw.edu.au/jw/hearing.html</a>: prueba en línea (HTML5) para levantar la curva isofónica propia de 30 Hz a 16 kHz en pasos de 3 dB, con audífonos cerrados; en inglés. Más completa que la demo del curso; ideal para repetir en casa.</li>
+<li>Chile, Ministerio de Salud. Decreto Supremo N.º 594 (1999), <em>Reglamento sobre condiciones sanitarias y ambientales básicas en los lugares de trabajo</em>, arts. 74–75 (texto vigente, leychile.cl/BCN).</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

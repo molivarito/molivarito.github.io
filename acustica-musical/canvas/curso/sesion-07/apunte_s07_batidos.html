@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>apunte_s07_batidos – Acústica Musical · UC</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1b1e7e8ee10296b6f6820b1334157194.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#batidos-la-ondulación-que-delata-la-desafinación" id="toc-batidos-la-ondulación-que-delata-la-desafinación" class="nav-link active" data-scroll-target="#batidos-la-ondulación-que-delata-la-desafinación">Batidos: la ondulación que delata la desafinación</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-esa-ondulación" id="toc-qué-es-esa-ondulación" class="nav-link" data-scroll-target="#qué-es-esa-ondulación">¿Qué es esa ondulación?</a></li>
+  <li><a href="#por-qué-dos-tonos-casi-iguales-laten" id="toc-por-qué-dos-tonos-casi-iguales-laten" class="nav-link" data-scroll-target="#por-qué-dos-tonos-casi-iguales-laten">¿Por qué dos tonos casi iguales laten?</a></li>
+  <li><a href="#por-qué-oímos-una-sola-nota-y-no-dos" id="toc-por-qué-oímos-una-sola-nota-y-no-dos" class="nav-link" data-scroll-target="#por-qué-oímos-una-sola-nota-y-no-dos">¿Por qué oímos una sola nota y no dos?</a></li>
+  <li><a href="#cómo-se-convierte-el-batido-en-una-herramienta-de-afinación" id="toc-cómo-se-convierte-el-batido-en-una-herramienta-de-afinación" class="nav-link" data-scroll-target="#cómo-se-convierte-el-batido-en-una-herramienta-de-afinación">¿Cómo se convierte el batido en una herramienta de afinación?</a></li>
+  <li><a href="#síntesis" id="toc-síntesis" class="nav-link" data-scroll-target="#síntesis">Síntesis</a></li>
+  <li><a href="#hacia-la-sesión-08" id="toc-hacia-la-sesión-08" class="nav-link" data-scroll-target="#hacia-la-sesión-08">Hacia la sesión 08</a></li>
+  <li><a href="#referencias-y-lectura-complementaria" id="toc-referencias-y-lectura-complementaria" class="nav-link" data-scroll-target="#referencias-y-lectura-complementaria">Referencias y lectura complementaria</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../curso/sesion-07/apunte_s07_batidos.html">Sesión 07 — Prueba 1 + batidos</a></li><li class="breadcrumb-item"><a href="../../curso/sesion-07/apunte_s07_batidos.html">Batidos: la ondulación que delata la desafinación</a></li></ol></nav></header>
+
+
+
+
+<section id="batidos-la-ondulación-que-delata-la-desafinación" class="level1">
+<h1>Batidos: la ondulación que delata la desafinación</h1>
+<p><strong>Sesión 07</strong> (módulo 2) · Curso Acústica Musical UC <strong>Objetivos que cubre</strong>: OA2.2 (batidos de primer orden: primera experiencia del fenómeno, que s08 desarrolla), OA2.1 (un caso más donde lo percibido no copia lo físico: dos frecuencias → una sola altura que ondula). Apunte breve por diseño: el módulo 1 de esta sesión fue la Prueba 1 y casi no se introdujo contenido nuevo.</p>
+<section id="qué-es-esa-ondulación" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-esa-ondulación">¿Qué es esa ondulación?</h2>
+<p>Dos flautas tocaron la misma nota, y una quedó apenas desafinada. Lo que se oyó — y lo que la mayoría del curso había anticipado a medias en su ticket de s06 — no fue “dos notas”, ni exactamente “una nota desafinada”: fue <strong>una sola nota cuya sonoridad ondula</strong>, un <em>guau–guau–guau</em> regular, como si alguien subiera y bajara el volumen varias veces por segundo. Ese vaivén tiene nombre: <strong>batido</strong> (en rigor, <em>batido de primer orden</em>, porque hay parientes más sutiles que aparecerán más adelante en el curso).</p>
+<p>En la sesión lo contamos: con <span class="math inline">f_1 = 440</span> Hz fija y <span class="math inline">f_2 = 443</span> Hz, el curso contó tres ondulaciones por segundo. Con 442 Hz, dos. Con 437 Hz, tres de nuevo — da lo mismo hacia qué lado está la desafinación. La regla empírica quedó a la vista en la demo:</p>
+<p><span class="math display">f_b = |f_2 - f_1|</span></p>
+<p><strong>Los batidos por segundo son la diferencia entre las dos frecuencias.</strong> Un batido por segundo por cada hertz de diferencia. Es una de las relaciones más limpias de todo el curso: no es aproximada, no depende del instrumento ni del oyente, y se verifica contando con los dedos.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s07_batido_forma_onda.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 1.</strong> Suma de dos tonos cercanos: una sola onda rápida (a la frecuencia promedio) encerrada por una envolvente lenta (rojo) que sube y baja <span class="math inline">f_b = |f_2 - f_1|</span> veces por segundo. Se usan <span class="math inline">f_1 = 40</span> Hz y <span class="math inline">f_2 = 43</span> Hz para que el ciclo sea visible; la regla es la misma a cualquier altura.</figcaption>
+</figure>
+</div>
+</section>
+<section id="por-qué-dos-tonos-casi-iguales-laten" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-dos-tonos-casi-iguales-laten">¿Por qué dos tonos casi iguales laten?</h2>
+<p>No hace falta trigonometría para entenderlo; basta la imagen de dos trenes de empujones al aire (así describimos toda nota desde s01).</p>
+<p>Suponga <span class="math inline">f_1 = 440</span> y <span class="math inline">f_2 = 441</span> Hz. En el instante en que ambas ondas empujan el aire <em>a la vez</em> — están <strong>en fase</strong> — sus empujones se suman: el sonido se refuerza. Pero la segunda onda completa un ciclo más que la primera en cada segundo, así que se le va adelantando poquito a poco. Medio segundo después le lleva <em>medio ciclo</em> de ventaja: cuando una empuja, la otra succiona — están <strong>en contrafase</strong> — y los empujones se cancelan: el sonido casi desaparece. Al completar el segundo, la ventaja acumulada es un ciclo entero y todo vuelve a empezar: refuerzo, silencio, refuerzo, silencio.</p>
+<p>Con 1 Hz de diferencia, ese ciclo completo de refuerzo y cancelación ocurre exactamente una vez por segundo. Con 3 Hz de diferencia, la segunda onda “adelanta” tres ciclos por segundo y el patrón se repite tres veces: tres batidos. De ahí la regla <span class="math inline">f_b = |f_2 - f_1|</span>. La envolvente que dibuja la demo — esa curva que encierra a la onda y sube y baja lentamente — es el retrato de este juego de fases (figura 2).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s07_fases_batido.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 2.</strong> El mecanismo del batido. A la izquierda, dos ondas <em>en fase</em>: sus empujones se suman y la resultante tiene el doble de amplitud. A la derecha, <em>en contrafase</em>: cuando una empuja la otra succiona y la suma casi se anula. Dos tonos de frecuencias distintas pasan lentamente de una situación a la otra, y ese vaivén es el batido.</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><strong>Recuadro opcional (para quienes quieran la cuenta exacta).</strong> La suma de dos sinusoides de igual amplitud se puede reescribir como <span class="math display">\sin(2\pi f_1 t) + \sin(2\pi f_2 t) = 2\cos\!\big(2\pi \tfrac{f_2-f_1}{2} t\big)\,\sin\!\big(2\pi \tfrac{f_1+f_2}{2} t\big),</span> es decir, una onda “rápida” a la frecuencia promedio <span class="math inline">\tfrac{f_1+f_2}{2}</span>, multiplicada por una envolvente “lenta” que oscila a <span class="math inline">\tfrac{|f_2-f_1|}{2}</span>. Como la sonoridad no distingue si la envolvente es positiva o negativa, oímos <strong>dos</strong> máximos por cada ciclo de la envolvente: los batidos audibles ocurren a <span class="math inline">|f_2 - f_1|</span> por segundo, no a la mitad. Compare con Roederer (1997), sec.&nbsp;2.4.</p>
+</blockquote>
+</section>
+<section id="por-qué-oímos-una-sola-nota-y-no-dos" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-oímos-una-sola-nota-y-no-dos">¿Por qué oímos una sola nota y no dos?</h2>
+<p>Aquí asoma la parte perceptual — y la más provocadora. Físicamente hay <em>dos</em> frecuencias presentes en el aire; un espectro suficientemente fino mostraría dos picos. Pero el oído no oye dos notas: oye <strong>una</strong>, de altura intermedia, que ondula. Cuando dos frecuencias caen muy cerca una de otra, el sistema auditivo no logra separarlas y las funde en una sola sensación — y la “pelea” entre ambas se percibe como esa fluctuación de sonoridad.</p>
+<p>¿Y qué pasa cuando la diferencia crece? En el cierre de la sesión lo escuchamos sin explicarlo, y lo que su oído registró ahí es exactamente el punto de partida de la sesión 08: dónde están las fronteras, por qué existen y qué tienen que ver con la consonancia y con la construcción de acordes. No se lo adelantamos aquí — lo va a medir usted mismo. Por ahora, guarde la observación de su propio oído (quedó en su ticket de salida).</p>
+</section>
+<section id="cómo-se-convierte-el-batido-en-una-herramienta-de-afinación" class="level2">
+<h2 class="anchored" data-anchor-id="cómo-se-convierte-el-batido-en-una-herramienta-de-afinación">¿Cómo se convierte el batido en una herramienta de afinación?</h2>
+<p>Esta es la lectura práctica del fenómeno, y es la que los afinadores de teclados explotan desde hace siglos: <strong>el batido es un detector de desafinación más fino que el oído melódico.</strong> Si dos cuerdas difieren en 1 Hz, ningún oído las distingue como dos alturas — pero <em>cualquier</em> oído cuenta un batido por segundo sin esfuerzo. La receta del unísono es entonces: toque las dos fuentes juntas, escuche la ondulación y ajuste una de ellas de modo que el batido se haga cada vez más lento — un batido por segundo, uno cada dos segundos, uno cada cuatro… — hasta que se detenga. <strong>Batido detenido = unísono.</strong> En el juego de afinación de la sesión, los voluntarios llegaron rutinariamente a menos de 1 Hz de error solo escuchando; con paciencia, el método llega a fracciones de hertz.</p>
+<p>En la sesión 09 esta herramienta pasa de truco a oficio: veremos que no solo los unísonos, sino los intervalos (octavas, quintas, terceras) también producen batidos característicos cuando están desafinados, y que contando batidos se puede afinar un temperamento completo — el procedimiento histórico de los afinadores de piano (Benade 1990, cap. 16, lo describe paso a paso; lo probaremos).</p>
+</section>
+<section id="síntesis" class="level2">
+<h2 class="anchored" data-anchor-id="síntesis">Síntesis</h2>
+<ul>
+<li>Dos tonos casi iguales no se oyen como dos notas: se oyen como una sola nota cuya sonoridad ondula — el <strong>batido de primer orden</strong>.</li>
+<li>La regla es exacta y simple: <span class="math inline">f_b = |f_2 - f_1|</span>; un batido por segundo por cada hertz de diferencia.</li>
+<li>El mecanismo físico es el juego de fases: dos ondas casi iguales entran y salen de paso, alternando refuerzo y cancelación.</li>
+<li>El batido detenido es el detector de unísono más fino disponible sin instrumentos: la base de la afinación de oído (s09).</li>
+<li>Lo que aparece cuando la diferencia crece quedó oído pero no explicado: es el punto de partida de s08.</li>
+</ul>
+</section>
+<section id="hacia-la-sesión-08" class="level2">
+<h2 class="anchored" data-anchor-id="hacia-la-sesión-08">Hacia la sesión 08</h2>
+<p>Su ticket de salida quedó en la frontera: ¿qué se oye cuando la diferencia crece más allá de lo que “batea”, y dónde termina eso? La sesión 08 responde con el concepto de <strong>banda crítica</strong> — la resolución del oído — y con él explica la rugosidad, por qué algunos intervalos suenan ásperos y otros no, y qué tiene que decir la física sobre la consonancia. La misma demo de hoy vuelve a escena; traiga audífonos. Y desde s08 comienzan los talleres de medición sobre el objeto del proyecto de su grupo: traiga el objeto (o su avance medible).</p>
+</section>
+<section id="referencias-y-lectura-complementaria" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-y-lectura-complementaria">Referencias y lectura complementaria</h2>
+<ul>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la Música</em>. Ricordi — cap. 2, sec.&nbsp;2.4 (“Batidos de primer orden”, dentro de pp.&nbsp;24–78): el tratamiento perceptual que este apunte sigue.</li>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>, 2.ª ed. Dover — cap. 13, sec.&nbsp;13.5 (batidos y sonoridad de sonidos combinados); cap. 14 (introducción) y cap. 16 (afinación práctica por batidos) como anticipo de s08–s09.</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to Acoustics</em>. Oxford UP — cap. 3 (pp.&nbsp;69–164), sección “Pitch”, para la superposición de tonos puros.</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The Science of Sound</em>, 3.ª ed.&nbsp;— cap. 8, secs. 8.1–8.4, para quien quiera ejercicios numéricos de batidos.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>apunte_s12_vientos_y_luteria – Acústica Musical · UC</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1b1e7e8ee10296b6f6820b1334157194.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#vientos-y-lutería-la-columna-de-aire-a-la-medida" id="toc-vientos-y-lutería-la-columna-de-aire-a-la-medida" class="nav-link active" data-scroll-target="#vientos-y-lutería-la-columna-de-aire-a-la-medida">Vientos y lutería: la columna de aire a la medida</a>
+  <ul class="collapse">
+  <li><a href="#qué-hace-de-válvula-en-una-flauta" id="toc-qué-hace-de-válvula-en-una-flauta" class="nav-link" data-scroll-target="#qué-hace-de-válvula-en-una-flauta">¿Qué hace de válvula en una flauta?</a></li>
+  <li><a href="#por-qué-un-tubo-tiene-nota-y-cómo-se-calcula" id="toc-por-qué-un-tubo-tiene-nota-y-cómo-se-calcula" class="nav-link" data-scroll-target="#por-qué-un-tubo-tiene-nota-y-cómo-se-calcula">¿Por qué un tubo tiene nota, y cómo se calcula?</a></li>
+  <li><a href="#la-docena-del-clarinete-y-la-octava-de-la-flauta" id="toc-la-docena-del-clarinete-y-la-octava-de-la-flauta" class="nav-link" data-scroll-target="#la-docena-del-clarinete-y-la-octava-de-la-flauta">La docena del clarinete y la octava de la flauta</a></li>
+  <li><a href="#agujeros-cortar-el-tubo-sin-cortarlo" id="toc-agujeros-cortar-el-tubo-sin-cortarlo" class="nav-link" data-scroll-target="#agujeros-cortar-el-tubo-sin-cortarlo">Agujeros: cortar el tubo sin cortarlo</a></li>
+  <li><a href="#por-qué-todos-los-tubos-salieron-bajos" id="toc-por-qué-todos-los-tubos-salieron-bajos" class="nav-link" data-scroll-target="#por-qué-todos-los-tubos-salieron-bajos">¿Por qué todos los tubos salieron bajos?</a></li>
+  <li><a href="#los-vientos-se-afinan-calientes" id="toc-los-vientos-se-afinan-calientes" class="nav-link" data-scroll-target="#los-vientos-se-afinan-calientes">Los vientos se afinan calientes</a></li>
+  <li><a href="#y-el-material-el-debate-del-pvc" id="toc-y-el-material-el-debate-del-pvc" class="nav-link" data-scroll-target="#y-el-material-el-debate-del-pvc">¿Y el material? El debate del PVC</a></li>
+  <li><a href="#síntesis" id="toc-síntesis" class="nav-link" data-scroll-target="#síntesis">Síntesis</a></li>
+  <li><a href="#hacia-la-sesión-13" id="toc-hacia-la-sesión-13" class="nav-link" data-scroll-target="#hacia-la-sesión-13">Hacia la sesión 13</a></li>
+  <li><a href="#referencias-y-lectura-complementaria" id="toc-referencias-y-lectura-complementaria" class="nav-link" data-scroll-target="#referencias-y-lectura-complementaria">Referencias y lectura complementaria</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../curso/sesion-12/apunte_s12_vientos_y_luteria.html">Sesión 12 — Vientos y lutería</a></li><li class="breadcrumb-item"><a href="../../curso/sesion-12/apunte_s12_vientos_y_luteria.html">Vientos y lutería: la columna de aire a la medida</a></li></ol></nav></header>
+
+
+
+
+<section id="vientos-y-lutería-la-columna-de-aire-a-la-medida" class="level1">
+<h1>Vientos y lutería: la columna de aire a la medida</h1>
+<p><strong>Sesión 12</strong> · Curso Acústica Musical UC <strong>Objetivos que cubre</strong>: OA1.2 (predecir la nota de un tubo por su longitud y explicar la desviación), OA1.3 (la excitación soplada como oscilación auto-sostenida; tubos abiertos y cerrados y sus registros), OA5.2 (el ciclo construir–medir–explicar, vivido en el taller).</p>
+<section id="qué-hace-de-válvula-en-una-flauta" class="level2">
+<h2 class="anchored" data-anchor-id="qué-hace-de-válvula-en-una-flauta">¿Qué hace de válvula en una flauta?</h2>
+<p>El ticket de la semana pasada quedó cobrado. En la cuerda frotada había una válvula visible: la fricción, que agarra y suelta, con la cuerda de metrónomo. En la flauta no hay nada que pegue ni suelte — y sin embargo la nota es estable, así que <em>algo</em> tiene que estar entregando energía en ciclos sincronizados. La respuesta es elegante: la válvula es <strong>el propio chorro de aire</strong>.</p>
+<p>Cuando usted sopla una flauta (o un tubo del taller, o una botella), el chorro fino que sale de sus labios cruza un espacio abierto y va a dar contra un borde afilado: el <strong>bisel</strong>. Un chorro contra un borde es un sistema indeciso: puede pasar por dentro del tubo o por fuera, y cualquier corriente lateral mínima lo desvía. Ahora bien, el aire del tubo no está quieto: si la columna está oscilando, por la embocadura entra y sale un vaivén de aire. Ese vaivén empuja al chorro alternadamente hacia adentro y hacia afuera del bisel — y cada vez que el chorro entra, empuja la oscilación de la columna justo a tiempo. El chorro alimenta a la columna y la columna conmuta al chorro: es exactamente el <strong>régimen de oscilación</strong> de s10 y s11, con el aire haciendo de válvula y la columna de metrónomo (Benade 1990, cap. 20, sec.&nbsp;20.2, desarrolla el concepto de régimen; C&amp;G, cap. 8, pp.&nbsp;259–302, lo aplica a las maderas y flautas).</p>
+<p>Por eso soplar más fuerte no sube la nota de a poco: la afinación no la decide el soplo sino la columna, igual que en s11 no la decidía el arco sino la cuerda. El soplo elige, a lo más, <em>cuál</em> modo de la columna manda — y a eso vamos.</p>
+</section>
+<section id="por-qué-un-tubo-tiene-nota-y-cómo-se-calcula" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-un-tubo-tiene-nota-y-cómo-se-calcula">¿Por qué un tubo tiene nota, y cómo se calcula?</h2>
+<p>La columna de aire encerrada en un tubo es un sistema con <strong>modos</strong>, como la cuerda de s03: hay formas de oscilar que le salen naturales, con sus frecuencias características. Para un tubo <strong>abierto en ambos extremos</strong> (como la flauta, donde la embocadura abierta cuenta como extremo abierto), el modo más grave tiene</p>
+<p><span class="math display">f_1 = \frac{v}{2L}</span></p>
+<p>con <span class="math inline">v \approx 343</span> m/s (a 20 °C) y <span class="math inline">L</span> el largo del tubo. Y los modos siguientes caen en <span class="math inline">2f_1, 3f_1, 4f_1, \dots</span>: la serie armónica completa. Un tubo <strong>cerrado en un extremo y abierto en el otro</strong> (el tubo tapado del taller; el clarinete, cerrado por la caña) hace algo distinto en los dos frentes:</p>
+<p><span class="math display">f_1 = \frac{v}{4L}</span></p>
+<p>— una octava más grave que el mismo tubo abierto — y sus modos caen solo en <span class="math inline">3f_1, 5f_1, 7f_1, \dots</span>: <strong>los armónicos impares</strong>. La intuición sin fórmula: el extremo abierto exige que la presión no se acumule (el aire escapa), el extremo cerrado la exige máxima (el aire rebota). Un tubo cerrado-abierto tiene una condición distinta en cada punta, y solo un cuarto de onda cabe entre ambas; de ahí el <span class="math inline">4L</span>, y de ahí que solo los patrones impares calcen (figura 1).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s12_modos_tubos.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 1.</strong> Amplitud de la onda estacionaria de presión de los tres primeros modos de un tubo abierto–abierto (izquierda) y cerrado–abierto (derecha). En el extremo abierto la presión no puede acumularse (nodo); en la tapa es máxima. La velocidad del aire (punteada, primera fila) es exactamente complementaria: máxima donde la presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: por eso el tubo tapado baja a <span class="math inline">f_1 = v/4L</span> y conserva solo los armónicos impares.</figcaption>
+</figure>
+</div>
+<p>Estas dos fórmulas son toda la lutería de la sesión. Con <span class="math inline">v = 343</span> m/s, un La4 de 440 Hz pide un tubo tapado de <span class="math inline">L = 343/(4 \times 440) \approx
+0{,}195</span> m: diecinueve centímetros y medio. Proporciones puras: el doble de largo, una octava abajo; la mitad, una octava arriba.</p>
+</section>
+<section id="la-docena-del-clarinete-y-la-octava-de-la-flauta" class="level2">
+<h2 class="anchored" data-anchor-id="la-docena-del-clarinete-y-la-octava-de-la-flauta">La docena del clarinete y la octava de la flauta</h2>
+<p>El menú de modos explica el fenómeno de la escucha del día. Al soplar más fuerte, el chorro deja de sostener el modo grave y engancha el siguiente disponible. En la flauta (abierta), el siguiente es <span class="math inline">2f_1</span>: la nota <strong>salta la octava</strong>. En el tubo tapado del taller — y en el clarinete — el siguiente modo disponible no es <span class="math inline">2f_1</span> (no existe: es par) sino <span class="math inline">3f_1</span>: el salto es una octava más una quinta, la <strong>docena</strong> (12.ª). Mismo gesto, intervalos distintos, y la diferencia la fija la física de los extremos del tubo (ROS, cap. 12, dedica el capítulo a esta comparación; ROE, secs. 4.4–4.6, da el desarrollo de columnas de aire en español).</p>
+<p>El salto de registro no es un defecto: es el mecanismo con que los vientos multiplican sus notas. Una flauta con seis agujeros daría solo siete notas; con el segundo registro, la misma digitación vale dos veces.</p>
+</section>
+<section id="agujeros-cortar-el-tubo-sin-cortarlo" class="level2">
+<h2 class="anchored" data-anchor-id="agujeros-cortar-el-tubo-sin-cortarlo">Agujeros: cortar el tubo sin cortarlo</h2>
+<p>Un agujero lateral abierto es una fuga de presión: para la onda, el tubo “termina” aproximadamente donde está el primer agujero abierto. Destapar agujeros de abajo hacia arriba equivale a ir acortando el tubo — una escala fabricada con un solo tubo y ocho dedos. En la sesión lo vimos sobre la flauta real: cada agujero destapado subió la nota a saltos, y dos digitaciones distintas pudieron fabricar casi la misma nota (horquillas), porque hay más de una manera de construir el mismo “largo efectivo” (figura 2).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s12_agujero_tubo.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 2.</strong> Un agujero abierto es una fuga de presión: para la onda, el tubo termina aproximadamente donde está el primer agujero destapado (esquemático, tubo abierto–abierto). El largo efectivo <span class="math inline">L_{ef}</span> es menor que <span class="math inline">L</span> y la nota sube — destapar agujeros de abajo hacia arriba es ir acortando el tubo.</figcaption>
+</figure>
+</div>
+<p>La versión fina de esta historia — que un agujero abierto no corta el tubo del todo, y que la <em>red</em> de agujeros abiertos deja pasar los agudos por encima de una <strong>frecuencia de corte</strong> característica que firma el timbre de cada madera — es el sello de Benade (1990, cap. 21, secs. 21.1 y 21.4; cap. 22, sec.&nbsp;22.4). En este curso queda como mención: nos basta con la primera aproximación, que es la que usted usó para construir.</p>
+</section>
+<section id="por-qué-todos-los-tubos-salieron-bajos" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-todos-los-tubos-salieron-bajos">¿Por qué todos los tubos salieron bajos?</h2>
+<p>El resultado más instructivo del taller fue un “error” colectivo: los tres grupos cortaron su tubo al largo calculado, y las tres notas midieron <strong>bajas</strong>, todas, en un orden parecido de decenas de cents. Un error aleatorio se reparte para ambos lados; uno sistemático apunta a que el modelo olvida algo.</p>
+<p>Lo que olvida es que el extremo abierto de un tubo no es una frontera exacta. La columna de aire que vibra no termina en el borde del PVC: <strong>sobresale una puntita</strong> hacia afuera, porque el aire inmediatamente exterior también se mueve con ella. La columna efectiva es un poco más larga que el tubo, y <span class="math inline">f_1 = v/4L</span> con el <span class="math inline">L</span> de la huincha da entonces una frecuencia un poco más alta que la real: por eso lo medido quedó abajo de lo predicho. Es la <strong>corrección de extremo</strong> (figura 3), y es la razón de que la lutería real afine como usted afinó: cortando de menos a más, midiendo cada vez.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/figuras/s12_correccion_extremo.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 3.</strong> La corrección de extremo (esquemática, con <span class="math inline">\Delta L</span> exagerado): la columna que vibra sobresale del tubo y el nodo de presión queda afuera. El largo efectivo es <span class="math inline">L_{ef} = L + \Delta L</span>, con <span class="math inline">\Delta L \approx 0{,}6</span> veces el radio interior, y por eso la nota medida sale más grave que la calculada con el <span class="math inline">L</span> de la huincha.</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><strong>Recuadro opcional (el número fino).</strong> Para un tubo cilíndrico sin pestaña, la columna sobresale del extremo abierto aproximadamente <span class="math inline">0{,}6 \times</span> el <strong>radio</strong> interior del tubo (dato estándar de acústica de tubos; ver ROS, cap. 4, y C&amp;G, cap. 5). Para el PVC del taller (radio interior ≈ 8–10 mm <strong>[POR VERIFICAR** según el tubo comprado**]</strong>) son unos 5–6 mm de columna extra: en un tubo de 20 cm, un 3 % — que en cents (recuerde s09: 1 semitono ≈ 6 % ≈ 100 cents) es del orden de 50 cents. Compare con la desviación que midió su grupo. En la embocadura soplada la corrección real es mayor y depende del soplo: por eso la tratamos como cualitativa.</p>
+</blockquote>
+</section>
+<section id="los-vientos-se-afinan-calientes" class="level2">
+<h2 class="anchored" data-anchor-id="los-vientos-se-afinan-calientes">Los vientos se afinan calientes</h2>
+<p>El gancho del módulo 2 dejó otra predicción fallida productiva: casi todos esperaban que la flauta calentada bajara (“el metal dilata, el tubo se alarga”). Subió. La clave es que lo que vibra no es el tubo sino el <strong>aire de adentro</strong>, y la velocidad del sonido en el aire crece con la temperatura:</p>
+<blockquote class="blockquote">
+<p><strong>Recuadro: <span class="math inline">v</span> depende de la temperatura.</strong> En aire, <span class="math inline">v \approx
+331 + 0{,}6\,T</span> m/s, con <span class="math inline">T</span> en °C (dato estándar; C&amp;G, cap. 1 y cap. 5). A 20 °C: ≈ 343 m/s. Cada grado suma ≈ 0,6 m/s, es decir ≈ 0,17 % en <span class="math inline">f_1</span> — unos 3 cents por °C. El aliento del ejecutante puede subir la columna varios grados: decenas de cents, lo que el afinador mostró.</p>
+</blockquote>
+<p>La dilatación del metal existe, pero es un efecto cientos de veces más chico. Por eso los vientos llegan “bajos” con el instrumento frío, suben mientras se calientan, y la orquesta afina cuando ya soplaron un rato (C&amp;G, cap. 5, trae el ejemplo numérico de la flauta). Las cuerdas, para su desgracia, van para el otro lado — pero ese contraste ya lo razonó usted en la guía.</p>
+</section>
+<section id="y-el-material-el-debate-del-pvc" class="level2">
+<h2 class="anchored" data-anchor-id="y-el-material-el-debate-del-pvc">¿Y el material? El debate del PVC</h2>
+<p>El cierre dejó una pregunta incómoda y útil: los tubos del curso son PVC de ferretería y afinaron igual que cualquier tubo “noble” del mismo largo. Si lo que vibra es la columna de aire, y las paredes solo la contienen, ¿cuánto importa de qué está hecho el tubo? Benade (1990, cap. 22, sec.&nbsp;22.7) hizo la pregunta en serio — con mediciones — y su respuesta escandaliza a medio mundo musical: para paredes lisas, rígidas y sin fugas, la geometría interior domina y el material casi no toca al sonido. El “casi” (rugosidad, bordes de agujeros, fugas, respuesta del ejecutante que <em>siente</em> distinto un instrumento pesado) es donde el debate sigue vivo. Queda como cultura general del curso — y como advertencia científica: antes de atribuir un timbre al material, hay que descartar todo lo que cambia junto con él.</p>
+</section>
+<section id="síntesis" class="level2">
+<h2 class="anchored" data-anchor-id="síntesis">Síntesis</h2>
+<ul>
+<li>En los vientos, la válvula es el propio chorro sobre el bisel, y la columna de aire le pone el metrónomo: mismo régimen de oscilación que la cuerda frotada, sin nada que pegue ni suelte.</li>
+<li>Tubo abierto-abierto: <span class="math inline">f_1 = v/2L</span>, serie armónica completa, salta la octava. Tubo cerrado-abierto: <span class="math inline">f_1 = v/4L</span>, solo armónicos impares, salta la docena.</li>
+<li>Un agujero abierto acorta el tubo efectivo (la red de agujeros y su frecuencia de corte quedan de mención).</li>
+<li>La columna sobresale del tubo: lo construido mide sistemáticamente bajo respecto del cálculo ingenuo, y por eso se afina cortando de menos a más.</li>
+<li><span class="math inline">v</span> crece con la temperatura (≈ 0,6 m/s por °C): los vientos se afinan calientes.</li>
+</ul>
+</section>
+<section id="hacia-la-sesión-13" class="level2">
+<h2 class="anchored" data-anchor-id="hacia-la-sesión-13">Hacia la sesión 13</h2>
+<p>Su ticket de salida quedó apuntando al instrumento que usted lleva puesto: al cantar una vocal hay una “cuerda” (los pliegues vocales) y un “tubo” (la garganta y la boca). ¿Qué afina usted cuando canta más agudo — la cuerda, el tubo, o cada uno por su lado? La sesión 13 abre con la <strong>Prueba 2</strong> (temario s08–s12; lo de hoy entra solo con ítems básicos) y dedica el módulo 2, liviano, a esa pregunta: la voz como fuente y filtro.</p>
+</section>
+<section id="referencias-y-lectura-complementaria" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-y-lectura-complementaria">Referencias y lectura complementaria</h2>
+<ul>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to Acoustics</em>. Oxford UP — cap. 8, pp.&nbsp;259–302 (maderas y flautas, con mediciones propias en flautas); cap. 5, pp.&nbsp;183–202 (ondas en tubos; afinación vs.&nbsp;temperatura).</li>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>, 2.ª ed. Dover — cap. 20, sec.&nbsp;20.2 (regímenes de oscilación); cap. 21, secs. 21.1, 21.4 y 21.5 (curvas de resonancia, agujeros, registros); cap. 22, secs. 22.5 (familia de flautas) y 22.7 (el material de las paredes).</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The Science of Sound</em>, 3.ª ed.&nbsp;— cap. 12 (maderas: registros, la 12.ª del clarinete vs.&nbsp;la 8.ª de la flauta, tubos cónicos y cilíndricos); cap. 4 (tubos y resonancia, para ejercicios).</li>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la Música</em>. Ricordi — secs. 4.4–4.6 (columnas de aire e instrumentos de viento). Lectura alternativa en español.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

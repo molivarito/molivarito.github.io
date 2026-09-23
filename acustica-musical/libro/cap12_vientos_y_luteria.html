@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>cap12_vientos_y_luteria – Acústica Musical · UC</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../libro/cap13_la_voz.html" rel="next">
+<link href="../libro/cap11_cuerdas_frotadas_y_cuerpo.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b1e7e8ee10296b6f6820b1334157194.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../libro/00_prologo.html">Libro — Escuchar como científico</a></li><li class="breadcrumb-item"><a href="../libro/cap12_vientos_y_luteria.html">Capítulo 12 — Vientos y lutería: la columna de aire a la medida</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Acústica Musical · UC</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapa del curso</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../programa_curso.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programa del curso — Acústica Musical</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 01 — Escuchar como científico</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-01/apunte_s01_del_golpe_al_tono.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Del golpe al tono</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-01/actividades/acta_grupo_y_linea_base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acta de mesa (s01)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-01/actividades/rubrica_oa3_hoja.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rúbrica de escucha argumentada (OA3) — hoja del estudiante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-01/actividades/guia_pee_regla.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — La regla en la mesa (s01, módulo 1, 15 min)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-01/actividades/guia_pee_zona_gris.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — La zona gris ritmo–tono (s01, módulo 2, 35 min)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_tren_pulsos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — tren de pulsos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 02 — Ondas y representación</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-02/apunte_s02_ondas_y_representacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ondas y representación: dibujar el sonido</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-02/actividades/guia_pee_microscopio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — El microscopio en su bolsillo (s02, módulo 2, 35 min)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-02/actividades/guia_pee_retratos_de_sonido.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — Retratos de sonido (s02, módulo 1, 30 min)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_forma_onda_espectro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — forma de onda y espectro</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 03 — Modos de vibración</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-03/apunte_s03_modos_de_vibracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modos de vibración: por qué cada objeto suena como suena</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-03/actividades/enunciado_proyecto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proyecto del curso — Construir y explicar</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-03/actividades/guia_pee_sarten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — La sartén y sus parientes (s03, módulo 1, 35 min)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_modos_cuerda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — modos de una cuerda</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 04 — La receta del timbre</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-04/apunte_s04_la_receta_del_timbre.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-04/actividades/guia_pee_estirar_acortar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Media guía PEE — Estirar, acortar, engordar (s04, módulo 2, 14 min)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-04/actividades/guia_pee_mapa_cuerda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — El mapa de la cuerda (s04, módulo 1, 37 min)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-04/actividades/encargo_hito1_diseno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Encargo del Hito 1 — Diseño con predicción</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_sintesis_aditiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — síntesis aditiva</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 05 — La altura percibida</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-05/apunte_s05_la_altura_percibida.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La altura percibida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-05/actividades/registro_el_bajo_que_no_esta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de registro psicoacústico — El bajo que no está (s05, módulo 1, ~25 min)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-05/actividades/registro_el_oido_y_la_octava.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de registro psicoacústico — El oído y la octava (s05, módulo 2, 23 min)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_fundamental_ausente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — fundamental ausente</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 06 — Sonoridad y decibel</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-06/apunte_s06_sonoridad_y_decibel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sonoridad y decibel: medir lo fuerte</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-06/actividades/guia_estaciones_niveles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía de estaciones — Medir lo fuerte (s06, módulo 2, 40 min + cierre)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-06/actividades/hoja_registro_isofonica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de registro — Mi curva isofónica (s06, módulo 1, 27 min)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_decibel_sonoridad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — decibel y sonoridad</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 07 — Prueba 1 + batidos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-07/apunte_s07_batidos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Batidos: la ondulación que delata la desafinación</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_batidos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — batidos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 08 — Psicoacústica de la superposición</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-08/apunte_s08_banda_critica_y_consonancia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Banda crítica y consonancia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-08/actividades/guia_pee_radiografia_espectral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — Radiografía espectral del objeto (s08, módulo 2, 27 min)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-08/actividades/registro_mapa_del_choque.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de registro individual — El mapa del choque (s08, módulo 1, 27 min)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_banda_critica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — banda crítica</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 09 — Escalas y temperamentos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-09/apunte_s09_escalas_y_temperamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Escalas y temperamentos: afinar de oído</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-09/actividades/guia_medicion_escala_objeto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía de medición — ¿En qué escala vive mi objeto? (s09, módulo 2, 25 min)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-09/actividades/guia_pee_afinar_por_batidos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — Afinar de oído contando batidos (s09, módulo 1, 37 min)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_temperamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — temperamentos</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 10 — Resonancia, impedancia y acoplamiento</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-10/apunte_s10_resonancia_e_impedancia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resonancia, impedancia y acoplamiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-10/actividades/guia_pee_resonancia_botellas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — La botella que canta (s10, módulo 1, 32 min) — EVALUADA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-10/actividades/encargo_hito2_avance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Encargo — Hito 2 del proyecto: avance con evidencia sonora y medida (s10, 10 %)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_resonancia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — resonancia</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 11 — Cuerdas frotadas y el cuerpo</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-11/apunte_s11_cuerdas_frotadas_y_cuerpo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cuerdas frotadas y el cuerpo del instrumento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-11/actividades/guia_acoplamiento_objeto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía — ¿Quién radia aquí? (s11, módulo 2, 26 min) · SIN NOTA — serie del objeto (s08–s12)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-11/actividades/guia_pee_punto_de_frotado.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — El punto de frotado (s11, módulo 1, 31 min) · TALLER EVALUADO</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_helmholtz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — movimiento de Helmholtz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 12 — Vientos y lutería</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-12/apunte_s12_vientos_y_luteria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vientos y lutería: la columna de aire a la medida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-12/actividades/guia_pee_construccion_tubo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía PEE — Lutería de tubo: una nota a la medida (s12, módulos 1 y 2, taller EVALUADO)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_tubo_agujeros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — tubo con agujeros</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 13 — Prueba 2 + la voz</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-13/apunte_s13_la_voz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La voz cantada: fuente y filtro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_formantes_voz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — formantes de la voz</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 14 — La sala como instrumento</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-14/apunte_s14_la_sala_como_instrumento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La sala como instrumento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-14/actividades/guia_salida_medicion_t60.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía de medición — Medir el <span class="math inline">T_{60}</span> de tres espacios del edificio (s14, módulo 2 completo, 70 min)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-14/actividades/rutas_salida_medicion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Espacios de medición — s14, módulo 2 (tres espacios del edificio)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-14/actividades/encargo_hito3_presentacion_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Encargo del Hito 3 — Presentación final + informe del proyecto (s15, 15 %)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demos/demo_modos_sala.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demo — modos de sala</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sesión 15 — Presentaciones finales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-15/apunte_s15_como_defender_un_proyecto_acustico.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cómo defender un proyecto acústico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" role="navigation" aria-expanded="false">
+ <span class="menu-text">Actividades</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso/sesion-15/actividades/hoja_escucha_presentaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hoja de escucha argumentada — presentaciones finales (s15)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" role="navigation" aria-expanded="true">
+ <span class="menu-text">Libro — Escuchar como científico</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/00_prologo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prólogo — Escuchar como científico</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap01_del_golpe_al_tono.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 1 — Del golpe al tono</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap02_ondas_y_espectrograma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 2 — Dibujar el sonido</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap03_modos_de_vibracion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 3 — Modos de vibración: por qué cada objeto suena como suena</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap04_la_receta_del_timbre.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 4 — La receta del timbre</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap05_la_altura_percibida.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 5 — La altura percibida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap06_sonoridad_y_decibel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 6 — Sonoridad y decibel: medir lo fuerte</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap07_batidos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 7 — La primera cosecha (y una ondulación)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap08_banda_critica_y_consonancia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 8 — El borde del batido (banda crítica y consonancia)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap09_escalas_y_temperamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 9 — La cuenta que no cierra (escalas y temperamentos)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap10_resonancia_e_impedancia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 10 — Resonancia, impedancia y acoplamiento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap11_cuerdas_frotadas_y_cuerpo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 11 — Cuerdas frotadas y el cuerpo del instrumento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap12_vientos_y_luteria.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Capítulo 12 — Vientos y lutería: la columna de aire a la medida</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap13_la_voz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 13 — La segunda cosecha (y el instrumento que lleva puesto)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap14_la_sala_como_instrumento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 14 — La sala como instrumento</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../libro/cap15_explicar_es_la_prueba.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Capítulo 15 — Explicar es la prueba</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" role="navigation" aria-expanded="false">
+ <span class="menu-text">Materiales</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../apps_recomendadas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apps recomendadas — análisis de sonido en el celular</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#capítulo-12-vientos-y-lutería-la-columna-de-aire-a-la-medida" id="toc-capítulo-12-vientos-y-lutería-la-columna-de-aire-a-la-medida" class="nav-link active" data-scroll-target="#capítulo-12-vientos-y-lutería-la-columna-de-aire-a-la-medida">Capítulo 12 — Vientos y lutería: la columna de aire a la medida</a>
+  <ul class="collapse">
+  <li><a href="#un-instrumento-sin-partes-móviles" id="toc-un-instrumento-sin-partes-móviles" class="nav-link" data-scroll-target="#un-instrumento-sin-partes-móviles">Un instrumento sin partes móviles</a></li>
+  <li><a href="#la-válvula-invisible" id="toc-la-válvula-invisible" class="nav-link" data-scroll-target="#la-válvula-invisible">La válvula invisible</a></li>
+  <li><a href="#el-resonador-configurable" id="toc-el-resonador-configurable" class="nav-link" data-scroll-target="#el-resonador-configurable">El resonador configurable</a></li>
+  <li><a href="#registros-multiplicar-las-notas-sin-agregar-tubo" id="toc-registros-multiplicar-las-notas-sin-agregar-tubo" class="nav-link" data-scroll-target="#registros-multiplicar-las-notas-sin-agregar-tubo">Registros: multiplicar las notas sin agregar tubo</a></li>
+  <li><a href="#agujeros-una-escala-en-un-solo-tubo" id="toc-agujeros-una-escala-en-un-solo-tubo" class="nav-link" data-scroll-target="#agujeros-una-escala-en-un-solo-tubo">Agujeros: una escala en un solo tubo</a></li>
+  <li><a href="#la-lutería-como-física-experimental" id="toc-la-lutería-como-física-experimental" class="nav-link" data-scroll-target="#la-lutería-como-física-experimental">La lutería como física experimental</a></li>
+  <li><a href="#preguntas-que-la-sesión-va-a-responder" id="toc-preguntas-que-la-sesión-va-a-responder" class="nav-link" data-scroll-target="#preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión va a responder</a></li>
+  <li><a href="#referencias-del-capítulo" id="toc-referencias-del-capítulo" class="nav-link" data-scroll-target="#referencias-del-capítulo">Referencias del capítulo</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../libro/00_prologo.html">Libro — Escuchar como científico</a></li><li class="breadcrumb-item"><a href="../libro/cap12_vientos_y_luteria.html">Capítulo 12 — Vientos y lutería: la columna de aire a la medida</a></li></ol></nav></header>
+
+
+
+
+<section id="capítulo-12-vientos-y-lutería-la-columna-de-aire-a-la-medida" class="level1">
+<h1>Capítulo 12 — Vientos y lutería: la columna de aire a la medida</h1>
+<p><em>Lectura previa a la sesión 12. Objetivos: OA1.2, OA1.3, OA5.2.</em></p>
+<section id="un-instrumento-sin-partes-móviles" class="level2">
+<h2 class="anchored" data-anchor-id="un-instrumento-sin-partes-móviles">Un instrumento sin partes móviles</h2>
+<p>Mire una flauta de cerca — la que sea: traversa, dulce, quena, un tubo de pan. Ahora hágale la pregunta de la semana pasada. En la cuerda frotada encontramos una válvula (la fricción, que agarra y suelta) y un metrónomo (la cuerda misma, que le impone su vaivén). ¿Dónde está la válvula de la flauta? No hay crin, no hay resina, no hay caña que se cierre, no hay labios zumbando como en la trompeta. No hay, en rigor, ninguna pieza que se mueva. Solo un tubo con agujeros y una persona que sopla. Y sin embargo la nota sale estable, afinada y sostenida — la firma inconfundible de una oscilación auto-sostenida, que ya sabemos leer: si hay nota estable, <em>algo</em> está entregando energía en ciclos, y <em>algo</em> le está marcando el compás.</p>
+<p>Su ticket de salida de la sesión pasada dejó la pregunta armada, y este capítulo la responde. La sesión, además, le va a pedir algo más que entenderlo: va a <strong>construir</strong> un instrumento de viento — modesto, de PVC, pero suyo — prediciendo su nota antes de cortarlo. Es la única sesión del curso dedicada por completo a la lutería, y el profesor pone sobre la mesa su propio caso de estudio: las flautas que investiga y construye desde hace décadas.</p>
+</section>
+<section id="la-válvula-invisible" class="level2">
+<h2 class="anchored" data-anchor-id="la-válvula-invisible">La válvula invisible</h2>
+<p>Cuando usted sopla el borde de una botella, o la embocadura de una flauta, sus labios lanzan una lámina delgada de aire — un <strong>chorro</strong> — contra un filo: el <strong>bisel</strong>. Un chorro contra un filo es un sistema maravillosamente indeciso. Puede pasar por dentro; puede pasar por fuera; y basta una corriente lateral minúscula para convencerlo de cambiar de bando.</p>
+<p>Esa corriente lateral existe, y viene del propio tubo. Si la columna de aire encerrada está oscilando, por la ventana de la embocadura entra y sale un vaivén de aire — el “respiradero” de la oscilación. Ese vaivén empuja al chorro alternadamente hacia adentro y hacia afuera del bisel. Y cada vez que el chorro se vuelca hacia adentro, sopla a favor de la oscilación, reponiendo la energía que se gastó en sonar. El círculo se cierra solo: la columna conmuta al chorro, el chorro alimenta a la columna. La válvula es <strong>el aire mismo</strong>, y el metrónomo es el tubo (Benade construye así los “regímenes de oscilación” de todos los vientos: 1990, cap. 20, sec.&nbsp;20.2; para las flautas en particular, cap. 22, y C&amp;G, cap. 8).</p>
+<p>Fíjese en lo que esto implica — y que la sesión pondrá a prueba con el oído: si la afinación la fija la columna y no el soplo, soplar más fuerte <em>no debería</em> subir la nota gradualmente, igual que apretar más el arco no subía la nota de la cuerda. ¿Qué hace entonces el soplo cuando crece demasiado? Guarde la pregunta dos secciones.</p>
+</section>
+<section id="el-resonador-configurable" class="level2">
+<h2 class="anchored" data-anchor-id="el-resonador-configurable">El resonador configurable</h2>
+<p>¿Y por qué la columna tiene una nota propia? Porque es un sistema con <strong>modos</strong>, exactamente como la cuerda de la sesión 3 — solo que aquí lo que vibra es aire encerrado, no acero estirado. Para un tubo <strong>abierto en los dos extremos</strong> (la flauta califica: la ventana de la embocadura cuenta como extremo abierto), el modo más grave cae en</p>
+<p><span class="math display">f_1 = \frac{v}{2L}</span></p>
+<p>donde <span class="math inline">v \approx 343</span> m/s es la velocidad del sonido a 20 °C y <span class="math inline">L</span> el largo del tubo — y los modos siguientes forman la serie armónica completa: <span class="math inline">2f_1, 3f_1, 4f_1, \dots</span></p>
+<p>Si en cambio el tubo está <strong>cerrado en un extremo</strong> (un tubo de pan tapado abajo; un clarinete, que la caña sella casi por completo), pasan dos cosas curiosas a la vez:</p>
+<p><span class="math display">f_1 = \frac{v}{4L}</span></p>
+<p>— el mismo tubo, tapado, suena una <strong>octava más grave</strong> — y de la serie de modos sobreviven <strong>solo los armónicos impares</strong>: <span class="math inline">3f_1, 5f_1,
+7f_1, \dots</span> La intuición, sin fórmula: un extremo abierto es una puerta — la presión no puede acumularse ahí, porque el aire escapa; un extremo cerrado es una pared — la presión rebota y ahí es máxima. Un tubo con puerta y puerta acomoda media onda; un tubo con puerta y pared solo acomoda un cuarto — de ahí el 4 — y únicamente los patrones impares calzan con una punta de cada tipo (el desarrollo completo, en español, está en Roederer 1997, secs. 4.4–4.6; con ejercicios, en Rossing et al.&nbsp;2002, cap. 12). La figura 1 dibuja ambos menús de modos.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/figuras/s12_modos_tubos.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 1.</strong> Amplitud de la onda estacionaria de presión de los tres primeros modos de un tubo abierto–abierto y de uno cerrado–abierto. La “puerta” (extremo abierto) impone un nodo de presión; la “pared” (tapa), un máximo. La velocidad del aire (punteada, primera fila) es complementaria: máxima donde la presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: de ahí el <span class="math inline">4L</span> y la serie impar.</figcaption>
+</figure>
+</div>
+<p>Dos fórmulas de una línea, y con ellas se predice la nota de cualquier tubo simple con pura aritmética. Compruébelo antes de venir: ¿qué largo necesita un tubo tapado para dar el La del afinador, 440 Hz? Haga el cálculo (es una división) y tráigalo anotado — en la sesión va a cortar PVC con ese número, y el tubo va a tener la última palabra.</p>
+</section>
+<section id="registros-multiplicar-las-notas-sin-agregar-tubo" class="level2">
+<h2 class="anchored" data-anchor-id="registros-multiplicar-las-notas-sin-agregar-tubo">Registros: multiplicar las notas sin agregar tubo</h2>
+<p>Ahora la pregunta que quedó guardada. Si el soplo no puede subir la nota gradualmente, ¿qué hace cuando crece? Llega un punto en que el chorro se vuelve demasiado rápido para seguirle el paso al modo grave, y engancha el <strong>siguiente modo disponible</strong> de la columna. La nota no se desliza: <strong>salta</strong>. En la flauta — tubo abierto, serie completa — el siguiente modo es <span class="math inline">2f_1</span>: el salto es una octava limpia, y es el mecanismo con que la flauta fabrica su segundo registro sin agregar ni un centímetro de tubo. La primera cosa que oirá en la sesión es exactamente esto, en vivo, con una misma digitación.</p>
+<p>¿Y en un tubo tapado, donde los modos pares no existen? Ahí el “siguiente disponible” es otro, y el salto es otro intervalo — uno que distingue de oído a toda una familia de instrumentos. No se lo vamos a decir: dedúzcalo de la serie impar, escríbalo, y en el taller lo va a soplar usted mismo (los clarinetistas del curso ya lo saben; que guarden el secreto y verifiquen).</p>
+</section>
+<section id="agujeros-una-escala-en-un-solo-tubo" class="level2">
+<h2 class="anchored" data-anchor-id="agujeros-una-escala-en-un-solo-tubo">Agujeros: una escala en un solo tubo</h2>
+<p>Falta el detalle que convierte un tubo en un instrumento: los <strong>agujeros laterales</strong>. Un agujero abierto es una fuga: para la onda, donde hay agujero abierto la presión ya casi no puede acumularse — el tubo, en primera aproximación, “termina” ahí. Destapar agujeros de abajo hacia arriba equivale entonces a acortar el tubo por etapas: una escala completa fabricada con un solo tubo y ocho dedos (figura 2). En la sesión lo verá medido en vivo, espectrograma mediante, sobre una flauta real.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/figuras/s12_agujero_tubo.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 2.</strong> Un agujero abierto es una fuga de presión: para la onda, el tubo termina aproximadamente donde está el primer agujero destapado (esquemático). El largo efectivo <span class="math inline">L_{ef}</span> es menor que <span class="math inline">L</span> y la nota sube.</figcaption>
+</figure>
+</div>
+<p>La historia fina — que el agujero no corta del todo, que la <em>red</em> de agujeros abiertos se comporta como un filtro con una <strong>frecuencia de corte</strong> que firma el timbre de cada madera — es la contribución más famosa de Benade a la acústica musical (1990, cap. 21, secs. 21.1 y 21.4). En este curso la dejamos como mención honrosa: para construir y afinar su tubo, la primera aproximación alcanza y sobra.</p>
+</section>
+<section id="la-lutería-como-física-experimental" class="level2">
+<h2 class="anchored" data-anchor-id="la-lutería-como-física-experimental">La lutería como física experimental</h2>
+<p>Queda por decir por qué esta sesión es un taller de construcción y no una clase de fórmulas. La razón es el corazón del curso: entre la fórmula y el instrumento hay un tramo que solo se cruza midiendo. Su grupo va a predecir un largo, cortar un tubo a esa medida exacta, y medir la nota con el afinador. Y el resultado — se lo anticipamos sin arruinar nada — le va a enseñar más que la fórmula misma. ¿Quedará la nota clavada? ¿Alta? ¿Baja? ¿Y si se desvía, será mala suerte de su grupo, o les pasará algo parecido a todos? Cada respuesta posible cuenta una historia física distinta: los errores aleatorios se reparten; los sistemáticos delatan a un modelo que olvida algo.</p>
+<p>Hay una asimetría práctica que conviene traer pensada, porque es la ley de hierro de toda lutería sustractiva: un tubo cortado de más no se puede alargar. Si tuviera que equivocarse, ¿para qué lado le conviene? ¿Y cómo diseñaría el proceso — de una vez o por etapas — para que el error posible siempre quede del lado corregible?</p>
+<p>Una pregunta más para el camino, cortesía del capítulo 5 de C&amp;G: los músicos de viento afinan la orquesta <em>después</em> de tocar un rato, con el instrumento “caliente”. Algo le pasa a la afinación de una columna de aire cuando cambia la temperatura. ¿Sube o baja la nota de una flauta tibia? Piense qué cosa, exactamente, es la que vibra — y no conteste demasiado rápido: en la sesión se vota antes de medir.</p>
+</section>
+<section id="preguntas-que-la-sesión-va-a-responder" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión va a responder</h2>
+<ol type="1">
+<li>Si en la flauta no hay nada que pegue ni suelte, ¿qué hace de válvula y qué le pone el metrónomo? ¿Puede señalar, en el régimen de oscilación, quién entrega la energía y quién fija la frecuencia?</li>
+<li>¿Qué largo de tubo tapado da la nota que le asignen a su grupo — y qué marcará el afinador cuando lo corten exactamente a esa medida? ¿Les pasará lo mismo a los demás grupos?</li>
+<li>Soplando más fuerte, sin cambiar nada más: ¿a qué intervalo salta un tubo abierto, y a cuál uno tapado? ¿Qué tiene que ver eso con que el clarinete y la flauta se digiten tan distinto?</li>
+<li>¿Por qué destapar un agujero lateral sube la nota, y por qué “abrir un agujero” y “cortar el tubo” son casi la misma operación?</li>
+<li>Una flauta tibia, ¿afina más alto o más bajo que fría? ¿Qué es lo que vibra en un viento — el tubo o el aire?</li>
+</ol>
+</section>
+<section id="referencias-del-capítulo" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Benade (1990), cap. 20, sec.&nbsp;20.2 (regímenes de oscilación); cap. 21, secs. 21.1, 21.4 y 21.5 (resonancias, agujeros y registros); cap. 22, secs. 22.5 y 22.7 (la familia de las flautas; el material de las paredes — léala después de la sesión, para el debate).</li>
+<li>Campbell &amp; Greated (1987), cap. 8 (pp.&nbsp;259–302) — maderas y flautas, con mediciones propias; cap. 5 (pp.&nbsp;183–202) — ondas en tubos y el efecto de la temperatura en la afinación.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), cap. 12 — registros y comparación clarinete/flauta, con ejercicios numéricos de tubos.</li>
+<li>Roederer (1997), secs. 4.4–4.6 — columnas de aire ideales y reales; en español.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../libro/cap11_cuerdas_frotadas_y_cuerpo.html" class="pagination-link" aria-label="Capítulo 11 — Cuerdas frotadas y el cuerpo del instrumento">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Capítulo 11 — Cuerdas frotadas y el cuerpo del instrumento</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../libro/cap13_la_voz.html" class="pagination-link" aria-label="Capítulo 13 — La segunda cosecha (y el instrumento que lleva puesto)">
+        <span class="nav-page-text">Capítulo 13 — La segunda cosecha (y el instrumento que lleva puesto)</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

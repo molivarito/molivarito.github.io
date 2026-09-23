@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>cap03_modos_de_vibracion – Acústica Musical · UC</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b1e7e8ee10296b6f6820b1334157194.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#capítulo-3-modos-de-vibración-por-qué-cada-objeto-suena-como-suena" id="toc-capítulo-3-modos-de-vibración-por-qué-cada-objeto-suena-como-suena" class="nav-link active" data-scroll-target="#capítulo-3-modos-de-vibración-por-qué-cada-objeto-suena-como-suena">Capítulo 3 — Modos de vibración: por qué cada objeto suena como suena</a>
+  <ul class="collapse">
+  <li><a href="#una-deuda-pendiente-con-un-vaso" id="toc-una-deuda-pendiente-con-un-vaso" class="nav-link" data-scroll-target="#una-deuda-pendiente-con-un-vaso">Una deuda pendiente con un vaso</a></li>
+  <li><a href="#el-experimento-mental-de-las-masas-y-los-resortes" id="toc-el-experimento-mental-de-las-masas-y-los-resortes" class="nav-link" data-scroll-target="#el-experimento-mental-de-las-masas-y-los-resortes">El experimento mental de las masas y los resortes</a></li>
+  <li><a href="#dos-detalles-de-la-coreografía-nodos-y-decaimiento" id="toc-dos-detalles-de-la-coreografía-nodos-y-decaimiento" class="nav-link" data-scroll-target="#dos-detalles-de-la-coreografía-nodos-y-decaimiento">Dos detalles de la coreografía: nodos y decaimiento</a></li>
+  <li><a href="#la-cuerda-el-objeto-que-gana-la-lotería" id="toc-la-cuerda-el-objeto-que-gana-la-lotería" class="nav-link" data-scroll-target="#la-cuerda-el-objeto-que-gana-la-lotería">La cuerda: el objeto que gana la lotería</a></li>
+  <li><a href="#cuando-el-objeto-es-una-superficie" id="toc-cuando-el-objeto-es-una-superficie" class="nav-link" data-scroll-target="#cuando-el-objeto-es-una-superficie">Cuando el objeto es una superficie</a></li>
+  <li><a href="#en-esta-sesión-además-empieza-el-proyecto" id="toc-en-esta-sesión-además-empieza-el-proyecto" class="nav-link" data-scroll-target="#en-esta-sesión-además-empieza-el-proyecto">En esta sesión, además, empieza el proyecto</a></li>
+  <li><a href="#preguntas-que-la-sesión-va-a-responder" id="toc-preguntas-que-la-sesión-va-a-responder" class="nav-link" data-scroll-target="#preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión va a responder</a></li>
+  <li><a href="#referencias-del-capítulo" id="toc-referencias-del-capítulo" class="nav-link" data-scroll-target="#referencias-del-capítulo">Referencias del capítulo</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../libro/00_prologo.html">Libro — Escuchar como científico</a></li><li class="breadcrumb-item"><a href="../libro/cap03_modos_de_vibracion.html">Capítulo 3 — Modos de vibración: por qué cada objeto suena como suena</a></li></ol></nav></header>
+
+
+
+
+<section id="capítulo-3-modos-de-vibración-por-qué-cada-objeto-suena-como-suena" class="level1">
+<h1>Capítulo 3 — Modos de vibración: por qué cada objeto suena como suena</h1>
+<p><em>Lectura previa a la sesión 03. Objetivos: OA1.1, OA1.2, OA5.1 (intro).</em></p>
+<section id="una-deuda-pendiente-con-un-vaso" class="level2">
+<h2 class="anchored" data-anchor-id="una-deuda-pendiente-con-un-vaso">Una deuda pendiente con un vaso</h2>
+<p>Usted dejó una predicción escrita al salir de la sesión pasada: si golpeo un vaso y miro el espectrograma, ¿veré una línea o varias? No la cambie ahora — la gracia de una predicción es contrastarla —, pero permítase esta lectura como preparación del juicio: la sesión 3 empieza golpeando ese vaso de verdad, con la app mirando.</p>
+<p>Mientras tanto, hay una pregunta anterior que casi nunca nos hacemos, de puro obvia que parece: ¿por qué cada cosa suena <em>como ella misma</em>? Usted reconoce a ojos cerrados una copa, una puerta, una moneda en el suelo, la olla contra el lavaplatos. Nadie le enseñó ese catálogo; su oído lo construyó solo. Para que eso sea posible, cada objeto tiene que llevar consigo algo así como una firma sonora estable — algo que no cambia aunque cambie el golpe. Este capítulo es sobre esa firma: de dónde sale, por qué es fija, y por qué la de una cuerda de guitarra es musicalmente especial mientras que la de una sartén no lo es.</p>
+</section>
+<section id="el-experimento-mental-de-las-masas-y-los-resortes" class="level2">
+<h2 class="anchored" data-anchor-id="el-experimento-mental-de-las-masas-y-los-resortes">El experimento mental de las masas y los resortes</h2>
+<p>Empecemos por el objeto vibrante más simple que la física conoce: una masa colgando de un resorte. Tírela hacia abajo y suéltela: oscila, sube y baja, siempre al mismo ritmo. Si la estira más, oscila con más amplitud — pero <em>al mismo ritmo</em>. Ese ritmo propio, que no depende de cómo la empujó sino de cuánta masa tiene y qué tan duro es el resorte, es su <strong>frecuencia característica</strong>. Una masa, un resorte: una sola frecuencia. Un objeto así, si sonara, daría una sola línea en el espectrograma.</p>
+<p>Ahora conecte <em>dos</em> masas en cadena, con resortes entre ellas. Juegue mentalmente (o con elásticos y tuercas, que es mejor): descubrirá que hay exactamente dos maneras “limpias” de hacerlas oscilar. En una, las dos masas van y vienen juntas, como un solo cuerpo. En la otra, van en oposición: cuando una sube, la otra baja. Y aquí está el dato decisivo: cada una de esas dos coreografías tiene <em>su propio ritmo</em> — la de oposición es más rápida, porque los resortes trabajan más. Dos masas: dos formas de vibrar, dos frecuencias características. Con tres masas salen tres; con diez, diez (Benade 1990, cap. 6, construye esta escalera completa sin una sola ecuación, y es la mejor lectura complementaria de este capítulo).</p>
+<p>Cada una de esas coreografías tiene nombre técnico: <strong>modo de vibración</strong>. Y el salto final del argumento es corto: una cuerda, el parche de un tambor, el fondo de una sartén son — para la física — cadenas de muchísimas masas diminutas unidas elásticamente. Por eso un objeto real no tiene <em>una</em> frecuencia característica sino una familia entera de ellas: su repertorio de modos. Esa familia es la firma sonora que su oído cataloga. Depende de la forma, el material, el tamaño y las sujeciones del objeto — y de nada más. El golpe no puede inventarle frecuencias nuevas a un objeto; a lo sumo decide cuáles modos del repertorio despiertan con más energía, según dónde y cómo golpea.</p>
+<p>Guarde esta frase, que es el corazón del capítulo y casi del curso: <strong>cada línea del espectro es un modo del objeto sonando.</strong> El espectrograma que usted aprendió a leer la semana pasada es, ni más ni menos, el catálogo de modos del objeto, con cada uno apagándose a su propio ritmo.</p>
+</section>
+<section id="dos-detalles-de-la-coreografía-nodos-y-decaimiento" class="level2">
+<h2 class="anchored" data-anchor-id="dos-detalles-de-la-coreografía-nodos-y-decaimiento">Dos detalles de la coreografía: nodos y decaimiento</h2>
+<p>De las coreografías de las masas conviene retener dos rasgos que la sesión va a explotar.</p>
+<p>Primero: en un modo, el objeto vibra <em>entero</em>, pero no parejo. Hay lugares que se mueven mucho y lugares que no se mueven nada — los <strong>nodos</strong>. En la cadena de dos masas en oposición, el punto medio del resorte central queda quieto; en una cuerda vibrando hay puntos quietos perfectamente ubicados. Pregunta para llevar a la sesión (y no es retórica: la va a responder con una tapa de olla en la mano): si un modo tiene un lugar quieto y usted apoya ahí un dedo, ¿ese modo se apaga o sobrevive? ¿Y si apoya el dedo donde ese modo se mueve al máximo? Piense qué haría el dedo con la energía del movimiento. La respuesta convierte un dedo en una herramienta de edición de espectros.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/figuras/s03_decaimiento_multimodo.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 2.</strong> Los modos de un objeto golpeado no mueren juntos: en general los agudos se apagan antes que los graves. Como la mezcla de parciales cambia con el tiempo, el timbre de un golpe es una película —brillante al principio, más simple hacia la cola—, no una foto. Curvas esquemáticas.</figcaption>
+</figure>
+</div>
+<p>Segundo: los modos no mueren juntos. Cada uno pierde su energía a su propio ritmo, así que la mezcla cambia mientras el sonido se apaga — el timbre de un golpe es una película, no una foto (Benade 1990, cap. 4: toda la entrada del libro al problema es la especulación sobre una sartén golpeada, que en la sesión será literalmente nuestro laboratorio). Cuando mire el espectrograma del vaso, no mire solo cuántas líneas: mire cuáles duran.</p>
+</section>
+<section id="la-cuerda-el-objeto-que-gana-la-lotería" class="level2">
+<h2 class="anchored" data-anchor-id="la-cuerda-el-objeto-que-gana-la-lotería">La cuerda: el objeto que gana la lotería</h2>
+<p>Si cada objeto tiene su familia de frecuencias, la pregunta musical es inmediata: ¿hay familias mejores que otras? La respuesta del oído es un sí rotundo, y el objeto favorito lleva milenios identificado: la cuerda tensa.</p>
+<p>Los modos de una cuerda sujeta en ambos extremos son fáciles de dibujar: una sola barriga que sube y baja; dos barrigas alternadas con un punto quieto al medio; tres barrigas con dos puntos quietos; y así. Lo extraordinario no son las formas sino las frecuencias: la de dos barrigas resulta ser <em>exactamente el doble</em> de la fundamental; la de tres, <em>exactamente el triple</em>:</p>
+<p><span class="math display">f_n = n \, f_1 \qquad n = 1, 2, 3, \dots</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/figuras/s03_modos_cuerda.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Figura 1.</strong> Las cuatro primeras formas de vibrar de una cuerda fija en ambos extremos: una barriga, dos, tres, cuatro. Los puntos negros (●) marcan los <strong>nodos</strong>, que no se mueven. Lo extraordinario no son las formas sino las frecuencias: el modo de <span class="math inline">n</span> barrigas vibra a <span class="math inline">n</span> veces la frecuencia del fundamental.</figcaption>
+</figure>
+</div>
+<p>Números enteros. La cuerda es el objeto cuya familia de frecuencias cae en razones perfectas 1 : 2 : 3 : 4… — y el oído humano, por razones que la sesión 5 va a desmenuzar, premia esa regularidad fundiendo todos esos componentes en <em>una sola nota nítida y afinable</em>. En la sesión va a ver y oír cada modo por separado, y su suma, en una demo interactiva; y va a oír en una guitarra real cómo un dedo apoyado suavemente en el punto exacto deja sonar unos modos y silencia otros (los “armónicos naturales” que los guitarristas y violinistas usan desde siempre).</p>
+<p>Aquí nace una distinción de vocabulario que el curso declara obligatoria de aquí al final, porque ordena todo lo que suena:</p>
+<ul>
+<li><strong>Parcial</strong>: cualquier componente del espectro de un sonido, cualquier línea, venga de donde venga.</li>
+<li><strong>Armónico</strong>: un parcial que está en razón entera con la fundamental.</li>
+</ul>
+<p>Todos los armónicos son parciales; no todos los parciales son armónicos. ¿En qué objetos los parciales son armónicos y en cuáles no? Ya tiene los elementos para sospecharlo — y la sesión lo medirá, app en mano, con objetos de cocina. No le arruinamos el resultado; solo una advertencia: los números que salgan de la sartén le van a importar más que los de la cuerda.</p>
+</section>
+<section id="cuando-el-objeto-es-una-superficie" class="level2">
+<h2 class="anchored" data-anchor-id="cuando-el-objeto-es-una-superficie">Cuando el objeto es una superficie</h2>
+<p>Una cuerda vibra a lo largo de una sola dimensión. Pero un parche de timbal, un platillo o el fondo de la sartén son <em>superficies</em>: vibran en dos dimensiones a la vez. Sus modos existen igual — formas fijas de vibrar, cada una con su frecuencia — pero la geometría se enriquece: los puntos quietos se convierten en <strong>líneas nodales</strong>, curvas y diámetros enteros que no se mueven, dividiendo la superficie en zonas que suben y bajan alternadamente. Hay una manera clásica y hermosa de verlas: espolvorear arena sobre una placa vibrando — la arena huye de las zonas que se agitan y se acumula dibujando las líneas quietas. Las llamadas <em>figuras de Chladni</em> asombraron a Napoleón hace dos siglos y todavía se usan para diagnosticar placas de violín (C&amp;G, cap. 10; verá imágenes en la sesión).</p>
+<p>¿Y las frecuencias de esos modos 2D? ¿Caerán también en razones enteras, como la cuerda? Esa es exactamente la pregunta que separa a la percusión del resto de la orquesta, y la dejamos abierta para la sesión — con un solo dato para intrigar: el timbal, que es una membrana como el tom, logra sin embargo una altura tan clara que se le escriben notas en la partitura. Algo hicieron los timbaleros y sus constructores con los modos del parche. Qué, exactamente, es de lo mejor que la acústica musical tiene para contar (Benade 1990, cap. 9; ROS cap. 13).</p>
+</section>
+<section id="en-esta-sesión-además-empieza-el-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="en-esta-sesión-además-empieza-el-proyecto">En esta sesión, además, empieza el proyecto</h2>
+<p>La sesión 3 tiene un segundo acontecimiento: se lanza el <strong>proyecto del curso</strong> — en su grupo estable, van a construir o modificar un instrumento musical o una instalación sonora, y a explicar acústicamente lo que resulte. La pauta completa se entrega y discute en la sesión (hitos, fechas y porcentajes incluidos), pero hay una regla que conviene conocer desde ya porque define el espíritu del encargo: <strong>la calidad de la explicación vale más que el éxito sonoro</strong>. Un instrumento que suena “mal” pero cuyo grupo entiende y demuestra <em>por qué</em> suena así vale más que uno afinado por casualidad.</p>
+<p>Venga con el oído ya puesto: este capítulo le acaba de dar el primer lente de diseñador. Todo objeto sonoro es un repertorio de modos; construir un instrumento es decidir qué familia de frecuencias tendrá y cómo se van a encender. Piense en objetos, materiales, cuerdas, tubos, membranas — traiga dos ideas, aunque sean vagas: la sesión reserva tiempo para la primera lluvia de ideas del grupo.</p>
+</section>
+<section id="preguntas-que-la-sesión-va-a-responder" class="level2">
+<h2 class="anchored" data-anchor-id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión va a responder</h2>
+<ol type="1">
+<li>El vaso golpeado, ¿una línea o varias? ¿Y quién decide esas frecuencias: el golpe o el vaso?</li>
+<li>Los parciales de una sartén, ¿guardan razones enteras como los de la cuerda? ¿Qué números dan las razones <span class="math inline">f_2/f_1</span> y <span class="math inline">f_3/f_1</span> de los objetos de su kit?</li>
+<li>Si apoya un dedo en el centro de una tapa que suena, ¿se apaga todo el sonido, o solo una parte? ¿Cuál parte, y por qué?</li>
+<li>¿A qué intervalo musical suena el segundo modo de una cuerda respecto del primero? ¿Y el tercero?</li>
+<li>¿Cómo consigue el timbal una altura cantable si las membranas son, de nacimiento, inarmónicas?</li>
+</ol>
+</section>
+<section id="referencias-del-capítulo" class="level2">
+<h2 class="anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Benade (1990), cap. 4 (secs. 4.1–4.8 y EEQ 4.9) — la sartén golpeada: frecuencias características y decaimiento; cap. 6 (secs. 6.1–6.5) — modos construidos desde cadenas de masas, sin cálculo; cap. 9 (secs. 9.1–9.5) — barras, placas, membranas y el timbal.</li>
+<li>Campbell &amp; Greated (1987), cap. 5 (pp.&nbsp;183–202) — ondas y modos en cuerdas; cap. 10 (pp.&nbsp;409–452) — percusión, membranas y figuras de Chladni.</li>
+<li>Roederer (1997), cap. 4, sec.&nbsp;4.1 (pp.&nbsp;120 y ss.) — ondas estacionarias en la cuerda; en español.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), caps. 2 y 4 — sistemas vibrantes y modos, con ejercicios; cap. 13 — percusión (la especialidad de Rossing).</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
