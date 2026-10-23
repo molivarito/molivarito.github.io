@@ -55,6 +55,8 @@
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
   .fila-chk { font-family: Helvetica, Arial, sans-serif; font-size: .85rem; }
+  body.embebida .sesion, body.embebida h1, body.embebida .bajada { display: none; }
+  body.embebida { padding-top: 15vh; }   /* deja sitio al título de la lámina, que escala con la pantalla */
 </style>
 </head>
 <body>
@@ -256,7 +258,7 @@ function paraBarrido() {
 function pasoBarrido() {
   if (!barriendo) return;
   const t = (performance.now() - barridoT0) / 1000 / BARRIDO_S;
-  if (t >= 1) { paraBarrido(); return; }
+  if (t >= 1) { paraBarrido(); detener(); return; }   // al terminar solo, silencio: el golpe no se superpone a un tono
   sliderF.value = Math.round(F_MIN + (F_MAX - F_MIN) * t);
   aplicaFrecuencia();
 }
@@ -430,6 +432,14 @@ $('chkPres').addEventListener('change', () => {
     el.style.visibility = modoPres() ? 'hidden' : 'visible');
 });
 refrescaEtiquetas();
+// Desde una lámina (iframe) se oculta el encabezado propio: el título lo pone
+// la lámina. Con ?pres=1 en la URL arranca en modo presentación (sin
+// números), para la escucha del día sin tener que marcar la casilla.
+if (window.self !== window.top) document.body.classList.add('embebida');
+if (new URLSearchParams(location.search).get('pres') === '1') {
+  $('chkPres').checked = true;
+  $('chkPres').dispatchEvent(new Event('change'));
+}
 </script>
 </body>
 </html>
