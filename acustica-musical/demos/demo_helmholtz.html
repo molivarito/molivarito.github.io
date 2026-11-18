@@ -77,6 +77,10 @@
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
   .pie { font-family: var(--sans); font-size: .8rem; color: #555; margin-top: .5rem; }
+  /* Embebida en una lámina (regla del 2026-10-22): sin encabezado propio,
+     15vh libres arriba para el título de la lámina. */
+  body.embebida .sesion, body.embebida h1, body.embebida .bajada { display: none; }
+  body.embebida { padding-top: 15vh; }
 </style>
 </head>
 <body>
@@ -471,6 +475,10 @@ $('btnSaltoPuente').addEventListener('click', () => {
   actualizaAudio();
 });
 refrescaEtiquetas();
+</script>
+<script>
+/* Si la demo está dentro de una lámina, esconde su encabezado. */
+if (window.self !== window.top) document.body.classList.add('embebida');
 </script>
 </body>
 </html>
