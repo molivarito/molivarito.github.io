@@ -60,6 +60,9 @@
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
+  /* Embebida en una lámina: sin encabezado propio (formato-demos.md, 2026-10-22) */
+  body.embebida .sesion, body.embebida h1, body.embebida .bajada { display: none; }
+  body.embebida { padding-top: 2vh; }
 </style>
 </head>
 <body>
@@ -157,6 +160,7 @@ perillas independientes.</p>
 </div>
 
 <script>
+if (window.self !== window.top) document.body.classList.add('embebida');
 'use strict';
 // ---------------------------------------------------------------------------
 // Demo s13 — fuente y filtro. Un solo concepto: en la voz, la fuente (los
